@@ -1,0 +1,86 @@
+body {
+    background-color: #000000;
+    margin: 0 auto;
+    max-width: 960px;
+    min-width: 320px;
+    font-family: 'Source Code Pro', monospace;
+    line-height: 2em;
+}
+
+main{
+    padding-top:100px;
+}
+
+p{
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+}
+
+li{
+    list-style: none;
+}
+
+
+header {
+    height: 70px;
+    max-width: 960px;
+    width: 80%;
+	background-color: #000000;
+	border-bottom: 1px solid #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.item_menu{
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.item_menu:hover{
+    color: paleturquoise;
+    text-decoration: underline;
+}
+
+.burger{
+    display:none;
+    color: white;
+}
+
+.burger:hover{
+    color: paleturquoise;
+    ;
+}
+
+
+
+
+/* PROJECTS DIV */
+
+
+#projects-code{
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: space-around;
+    align-items: center;
+}
+#projects-code img{
+    width: 200px;
+    height: 200px;
+}
+
+
+@media screen and (max-width: 320x) {
+	header h1 {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 360px) {
+	nav.menu {
+		width: 100%;
+		left: -100%; 
+	}
+}

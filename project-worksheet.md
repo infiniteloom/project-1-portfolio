@@ -53,14 +53,14 @@ Include link to your google sheet here.  Here is the sample [Suresh had used in 
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Do not include the actual image and have it render on the page.  
 
-- [Mobile](https://git.generalassemb.ly/SEIR-629/project-1-portfolio/blob/master/readme-assets/mobile.png)
-- [Tablet](https://git.generalassemb.ly/SEIR-629/project-1-portfolio/blob/master/readme-assets/nav-highlight.gif)
-- [Desktop](https://git.generalassemb.ly/SEIR-629/project-1-portfolio/blob/master/readme-assets/desktop.png)
+- [Mobile](https://cloudinary.com/console/c-484e30e1d7e8f448a6d118584bab29/media_library/folders/ff9843dc6308db13b078ac873f943679)
+- [Tablet](https://cloudinary.com/console/c-484e30e1d7e8f448a6d118584bab29/media_library/folders/ff9843dc6308db13b078ac873f943679)
+- [Desktop](https://cloudinary.com/console/c-484e30e1d7e8f448a6d118584bab29/media_library/folders/4da929d78fa140dd51b8895684203c69)
 
-Wireframing Resources:
+Wireframing Resources Used:
 
-- [Mockflow](https://mockflow.com/app/#Wireframe)
-- [Figma](https://www.figma.com/)
+- [Mockflow](https://support.mockflow.com/article/108-how-to-share-projects-in-mockflow)
+
 
 
 
