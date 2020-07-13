@@ -3,8 +3,9 @@ body {
     margin: 0 auto;
     max-width: 960px;
     min-width: 320px;
+    font-size: 15px;
     font-family: 'Source Code Pro', monospace;
-    line-height: 2em;
+
 }
 
 main{
@@ -24,14 +25,32 @@ li{
 header {
     height: 70px;
     max-width: 960px;
-    width: 80%;
+    width: 90%;
 	background-color: #000000;
 	border-bottom: 1px solid #ffffff;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
+.title-name a{
+    color: white;
+    text-decoration: none;
+    font-size:20px;
+    font-family: 'Source Code Pro', monospace;
+}
+.title-name a:hover{
+    color: paleturquoise;
+    transform: scale(1.01);
+    transition: all 200ms;
+}
+.inline-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
 .item_menu{
     color: white;
     font-family: 'Source Code Pro', monospace;
@@ -40,8 +59,9 @@ header {
 }
 
 .item_menu:hover{
-    color: paleturquoise;
-    text-decoration: underline;
+    color: grey;
+    transform: scale(1.01);
+    transition: all 200ms;
 }
 
 .burger{
@@ -51,7 +71,6 @@ header {
 
 .burger:hover{
     color: paleturquoise;
-    ;
 }
 
 
@@ -63,15 +82,53 @@ header {
 #projects-code{
     max-width: 960px;
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;   
     justify-content: space-around;
     align-items: center;
+    width: 90%;
 }
+
 #projects-code img{
+    margin: 25px;
     width: 200px;
     height: 200px;
 }
+#projects-code img:hover{
+    filter: brightness(80%);
+    /* toggle the tite to show*/
+    transform: scale(1.01);
+    transition: all 200ms;
+}
+#projects-code p,  #projects-code a{
+    width: 200px;
+    height: 50px;
+    font-size: 10px;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+#projects-code a{
+    color: #ffffff;
+    text-decoration: none;
+}
+#projects-code a:hover{
+    color: paleturquoise;
+    text-decoration: underline;
+    transform: scale(2);
+}
+#projects-code p{
+    
+}
 
+
+#about{
+    line-height: 2em;
+    height:700px;
+    min-height: 400px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width: 320x) {
 	header h1 {
