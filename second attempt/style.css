@@ -26,7 +26,15 @@ li{
     list-style: none;
 }
 
-
+a{
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    text-decoration: none;
+}
+a:hover{
+    color: grey;
+    transition: all 200ms;
+}
 header {
     height: 50px;
     max-width: 960px;
@@ -42,15 +50,12 @@ header {
 }
 
 .title-name a{
-    color: white;
-    text-decoration: none;
     font-size:20px;
-    font-family: 'Source Code Pro', monospace;
+
 }
 .title-name a:hover{
-    color: paleturquoise;
+    color: gold;
     transform: scale(1.01);
-    transition: all 200ms;
 }
 .inline-menu{
     display: flex;
@@ -61,7 +66,6 @@ header {
 }
 .item_menu{
     color: white;
-    font-family: 'Source Code Pro', monospace;
     padding: 10px;
     text-decoration: none;
 }
@@ -69,7 +73,6 @@ header {
 .item_menu:hover{
     color: grey;
     transform: scale(1.01);
-    transition: all 200ms;
 }
 
 .burger{
@@ -78,13 +81,42 @@ header {
 }
 
 .burger:hover{
-    color: paleturquoise;
+    color: gold;
 }
 
 
+/* INTRO SECTION WITH ANIMATION IFRAME */
+#intro{
+    height: 100vh;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#yinyang{
+    height: 500px;
+    width: 500px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+#view-projects{
+    background-color: #000000;
+    border: 1px solid gold;
+    color: #ffffff;
+    padding: 10px;
+    font-weight: bold;
+}
+#view-projects a:hover{
+    color: gold;
+}
 
 
-/* PROJECTS DIV */
+/* PROJECTS SECTION */
 #projects{
     padding-top: 100px;
 }
@@ -105,9 +137,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     padding-bottom: 30px;
-
 }
-
 #projects-code img{
     margin: 0 25px 0 25px;
     width: 200px;
@@ -133,7 +163,7 @@ header {
     padding-top: 10px;
 }
 #projects-code a:hover{
-    color: grey;
+    color: gold;
     transform: scale(1.01);
     transition: all 200ms;
 }
@@ -142,27 +172,9 @@ header {
 }
 
 
-#intro{
-    height: 100vh;
-    width: 100%;
-    max-width: 960px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-#yinyang{
-    height: 80vh;
-    width: 60%;
-    border: none;
-    padding: 0;
-    margin: 0;
-
-    
-}
 
 
-
+/* ABOUT SECTION */
 #about{
     line-height: 2em;
     height: 100vh;
@@ -173,6 +185,8 @@ header {
 }
 
 
+
+/* CONTACT SECTION */
 #contact{
     line-height: 2em;
     height: 100vh;
@@ -182,6 +196,9 @@ header {
     align-items: center;
 }
 
+
+
+/* FOOTER */
 footer{
     height: 30px;
     max-width: 960px;
@@ -196,6 +213,9 @@ footer{
     z-index: 10;
 }
 
+
+
+/* MEDIA QUERY*/
 @media screen and (max-width: 320x) {
 	header h1 {
 		font-size: 16px;
