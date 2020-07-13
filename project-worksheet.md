@@ -8,8 +8,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1| Project Description | Incomplete
-|Day 1| Wireframes / Priority Matrix / Timeline | Incomplete
+|Day 1| Project Description | Complete
+|Day 1| Wireframes / Priority Matrix / Timeline | Complete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 4| MVP & Bug Fixes | Incomplete
 |Day 5| Final Touches | Incomplete
@@ -18,26 +18,36 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and/or functionality.
+My dark-themed website will have a landing page with a partly-transparent black-background sticky top menu ('projects', 'about', 'contact'), a central animation (p5.js) on the intro page with a call-to-action: 'view projects'. 
 
-My website will have a landing page with a top menu, a central image of my yin/yang project with a call-to-action: 'view projects'. 
+Emphasis on creative displays, i.e. implementing on:hover darkening, slow show and grow effects (darkening would be on click for mobile) to create a sense of transition while the endless scroll projects page spans different sections/project thumbnails/divs.
 
-- Clicking 'view projects' will jump down the page, the projects will be viewable by scrolling down. 
+Continuing to scroll down will lead to the about page and the contact form. 
+
+Bonus if I can figure out how to click on the menu item and have the browser jump down to a section of the page. 
 
 
-Color inspiration: 
-https://www.impactbnd.com/blog/tips-for-creating-a-perfect-color-scheme-for-your-brand-infographic
+Inspiration:
 
-Inspiration for parallax scrolling styles:
+- Parallax scrolling styles:
 https://www.crema.us/contact
 
-Inspiration for three column project thumbnail with slow-show text when div is centered on page. 
+- Three column project thumbnail with slow-show text when div is centered on page. 
 https://yardnyc.com/
+
+- Landing page animation feature:
+https://www.neundex.com/projects/
+
+- Dark theme and copy: 
+https://www.neundex.com/about/
+
 
 
 ## Google Sheet
 
 Include link to your google sheet here.  Here is the sample [Suresh had used in class](https://docs.google.com/spreadsheets/d/1V1M3Eq1NXH2PNmeTlVviRhEjX9kenq769Vo2P5mMtro/edit#gid=0) 
+
+
 
 ## Wireframes
 
@@ -53,52 +63,80 @@ Wireframing Resources:
 - [Figma](https://www.figma.com/)
 
 
+
+
 ## Time/Priority Matrix 
 
+Pulling Data from JSON (total 3-5hrs?):
+- Pull data using google json api 
+- Render data on page 
+- Allow user to choose favorite
+- Save their choices in firebase
 
-- Three column layout of project thumbnails that darken then grow a little in size on:hover. 
-- Creating a sticky menu with flex, hamburger menu for phone screen.  
+General CSS (total 7hr): 
+- Black background / white text with some color/ dark theme implementation (1hr)
+- Creating CSS grid, triple column thumbnails for projects (1hr)
+- Thumbnails styling: centering, brightness down, subtle grow on:hover (2hr)
+- Thumbnails copy for captions and styling (2hr)
+- Import and implement fonts (1hr)
 
+Features (total 4-5hrs):
+- Importing p5.js project for intro page animation (1hr)
+- Menu bar with flex for browser, styling (1-2hrs)
+- Sandwich bar for both mobile (1hr)
 
-Font options: font-family: 'SignalNo1D'; font-family: 'ArnoPro Regular';
+Low-priority features (priority level indicated from top to bottom) (total 17-19hrs, with research):
+- Contact form design research (4hr) - how to capture the data? what happens to the information? Color, size, copy?
+- Parallax effects, need research (3-4hrs) (darken other sections when not centered)
+- Projects/intro page: Slow show text when div is centered in the downward scroll (1hr)
+- Add a slow show display style to dropdown menu for mobile onclick of sandwich bar and an option to close the menu with an X at the top right. (ref: https://www.herdl.com/) - 2-4hrs with research.
+- Further font research (1hr)
+- Creating or placing arrow graphics from about to contact form (1hr)
+- Creative loading page, if necessary? (2hr)
 
-
-
-
-Include a full list of features that have been [prioritized](https://res.cloudinary.com/doaftkgbv/image/upload/v1583773146/ValueVSComplexity_u2inhx.png) based on the `Time and Priority` Matix.  This involves drawing a a square.  In the middle of the square, on the x axis draw a line.  The most left part of the line should start with 0hrs and the end of the line should include 2hrs.  This line will be used to estimate how much time any one feature will take to complete. 
-
-Now draw a vertical line on the y axis.  The top of this line should have `High` and the bottom `Low`.  This line will be used to assign a priority to to each feature you wish to include in the project.  
-
-Now create a separate list starting with A and assign it one of the features.  Continue to assign each feature a letter.  Once complete add each letter to the matrix assigning based on what your feel it's prioirty is an how long it will take to implement. If any one feature takes longer than 2hrs to complete than break it down into smaller tasks and reassign them a new letter. 
-
-Once complete tally up the time and determine how long the project will take to complete. Now break those features into MVP and PostMVP so you can guarantee you will have a fully functioning project to demo. 
-
-
-
-### MVP/PostMVP - 5min
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 
 
 #### MVP (examples)
 
+JSON:
 - Pull data using google json api
 - Render data on page 
 - Allow user to choose favorite
 - Save their choices in firebase
 
-- Creating menu with flex
-- Styling thumbnails of projects to darken / grow on:hover
-- Creating featured projects
-- Importing p5.js project for yin/yang 
+Menu:
+- Menu bar with flex for browser, styling (1-2hrs)
+- Sandwich bar for both mobile (1hr)
+
+General CSS: 
+- Black background / white text with some color/ dark theme implementation (1hr)
+- Creating CSS grid, triple column thumbnails for projects (1hr)
+- Thumbnails styling: centering, brightness down, subtle grow on:hover (2hr)
+- Thumbnails copy for captions and styling (2hr)
 - Import and implement fonts
+	Font options: 
+		< p >: Source Code Pro; 
+		< h > SignalNo1D; ArnoPro Regular;  
+		< title > Anton?
+
+Features:
+- Importing p5.js project for intro page animation
+- Contact Form
+- Grid layout for two different categories of projects 
 
 
 
-#### PostMVP 
+####Post MVP:
+- Projects/intro page: Slow show text when div is centered in the downward scroll (1hr)
+- Parallax effects, need research (3-4hrs) (darken other sections when not centered)
+- Contact form design research (4hr) - how to capture the data? what happens to the information? Color, size, copy?
+- Creative loading page, if necessary? (2hr)
+- Further font research (1hr)
+- Creating or placing arrow graphics from about section to contact form
+- Add a slow show display style to dropdown menu for mobile onclick of sandwich bar and an option to close the menu with an X at the top right. (ref: https://www.herdl.com/) - 2-4hrs with research.
 
-- Anything else that is not MVP
+
 
 
 
