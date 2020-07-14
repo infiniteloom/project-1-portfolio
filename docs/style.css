@@ -307,13 +307,54 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 200px;
+    margin-top: 100px;
 }
 #contact-google{
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+.form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 100px;
+}
+.form-input{
+    width: 500px;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid #a86561;
+    border-radius: 5px;
+    background-color: rgba(255,255,255, 0.7);
+    color: #397e7a;
+}
+.form-input-message{
+    width: 500px;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #a86561;
+    border-radius: 5px;
+    background-color: rgba(255,255,255, 0.7);
+    color: #397e7a;
+}
 
+.form button{
+    width: 150px;
+    height: 20px;
+    border: 1px solid #a86561;
+    border-radius: 5px;
+    background-color: rgba(255,255,255, 0.7);  
+    font-family: 'EB Garamond', serif;
+    margin-top: 10px;
+}
+.form button p{
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+}
+.form button:hover{
+    background-color: rgba(169,169,169, .8);  
+    transition: all 400ms;
+}
 
 
 /* FOOTER */
@@ -342,7 +383,7 @@ footer{
 }
 
 .fab, .fa-instagram, .fa-facebook-f, .fas, .fa-link, .fa-bandcamp, .fa-youtube,  .fa-github, .fa-linkedin-in{
-    color: #f1d8de;
+    color: rgba(169,169,169, 1);
     size: 1.5em;
 }
 .fa, .fas {
@@ -472,6 +513,17 @@ footer{
         font-size: .9em;
     }
 
+
+
+    .form-input{
+        width: 300px;
+    }
+    .form-input-message{
+        width: 300px;
+        height: 200px;
+    }
+
+
     footer{
         width: 100%;
       
@@ -589,6 +641,16 @@ footer{
         height: 70%;
         font-size: .9em;
     }
+
+
+    .form-input{
+        width: 300px;
+    }
+    .form-input-message{
+        width: 300px;
+    }
+
+
     #footer-menu{
         width: 100%;
     }
