@@ -123,7 +123,7 @@ header {
 #how-would-you p{
     padding: 40px;
 }
-#quote{
+.quote{
     color: #a86561;
     font-weight: bold;
     font-size: 1.3em;
@@ -154,13 +154,23 @@ header {
 #about-tagline{
     color: #e2bbc2;
 }
-#about-img{
+#about-img-web{
     background-image: url('assets/star_LeaThomasbyBelenPrietoBueno33.JPG');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     width: 50%;
+}
+
+#about-img-mobile{
+    background-image: url('assets/star_LeaThomasbyBelenPrietoBueno33.JPG');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    width: 100%;
+    height: 500px;
 }
 
 
@@ -324,8 +334,7 @@ footer{
     display: flex;
 	align-items: center;
     justify-content: space-around;
-    width: 25%;
-
+    width: 50%;
 }
 
 #footer-menu a{
@@ -410,6 +419,27 @@ footer{
 
 
 
+    #about{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        background-color: #bcd0cf;
+    }
+    #about-text{
+        width: 80%;
+    }
+    #about-img-web{
+        display: none;
+    }
+    #about-img-mobile{
+        display: block;
+    }
+
+
+
+
+
     #projects{
         padding:100px 0 0 0;
     }
@@ -447,7 +477,6 @@ footer{
       
     }
     #footer-menu{
-
         width: 100%;
     }
 }
@@ -487,7 +516,9 @@ footer{
         display:block;
         width: 100%;
     }
-
+    .burger{
+        display: block;
+    }
 
 
 
@@ -497,7 +528,6 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 1em;
     }
     #how-would-you-web{
         display: none;
@@ -507,9 +537,32 @@ footer{
         height: 100%;
     }
 
-    .burger{
+
+
+
+
+    #about{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        background-color: #dbe6e5;
+    }
+    #about-text{
+        width: 80%;
+    }
+    #about-img-web{
+        display: none;
+    }
+    #about-img-mobile{
         display: block;
     }
+
+
+
+
 
     #projects{
         padding:100px 0 0 0;
@@ -537,7 +590,6 @@ footer{
         font-size: .9em;
     }
     #footer-menu{
-
         width: 100%;
     }
 }

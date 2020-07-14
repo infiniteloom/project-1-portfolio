@@ -12,7 +12,7 @@ const url = `https://spreadsheets.google.com/feeds/list/1cPPgvKuA_8-PHICX1skEGzD
 fetch(url) 
     .then(response => response.json())
     .then(data => {
-        // console.log(data.feed.entry);
+        console.log(`data is ${data.feed.entry}`);
         const projects = data.feed.entry.map(entry => {
             return{
                 title: entry.gsx$title.$t,
