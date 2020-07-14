@@ -5,7 +5,7 @@ html{
 body {
     background-color: #ffffff;
     margin: 0 auto;
-    max-width: 960px;
+    /* max-width: 960px; */
     min-width: 320px;
     width: 100%;
     font-size: 15px;
@@ -15,7 +15,7 @@ body {
 }
 
 main{
-    padding-top:100px;
+    padding-top:50px;
 }
 
 p{
@@ -36,20 +36,22 @@ a:hover{
     transition: all 200ms;
 }
 header {
-    height: 50px;
-    max-width: 960px;
     width: 100%;
-	background-color: rgba(255, 255, 255, 0.8);
-	/* border-bottom: 1px solid #000000; */
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 0px;
+    z-index: 10;
+    position: fixed;
+    text-align: center;
+}
+#header-wrapper{
+    max-width: 960px;
+    margin: 0 auto;
 	display: flex;
 	align-items: center;
     justify-content: space-between;
-    position: fixed;
-    top: 0px;
-    z-index: 10;
     padding: 0 20px 0 20px;
 }
-
 .title-name a{
     font-size:20px;
     padding-left: 20px;
@@ -89,17 +91,17 @@ header {
 /* INTRO SECTION WITH ANIMATION IFRAME */
 #intro{
     background-image: url('assets/Lea_Portrait_Loam_2019_B_300dpi web.jpg');
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100%;
-    max-width: 960px;
-    display: flex;
+    margin: 0 auto;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: center; */
 }
 
 
@@ -113,6 +115,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: justify;
+}
+#quote{
+    color: #a86561;
+    font-weight: bold;
+    font-size: 1.3em;
 }
 
 
@@ -138,7 +146,7 @@ header {
 }
 
 #about-tagline{
-    color: #f3d4d9;
+    color: #e2bbc2;
 }
 #about-img{
     background-image: url('assets/star_LeaThomasbyBelenPrietoBueno33.JPG');
@@ -155,75 +163,107 @@ header {
 #projects{
     padding-top: 100px;
     background-color: #f1d8de;
+    padding: 100px 50px 100px 50px;
 }
 
-#projects-code, #projects{
-    max-width: 960px;
+#projects-code{
+    /* max-width: 960px; */
     display: flex;
     flex-wrap: wrap;   
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    text-align: left;
 }
 #projects-code div{
-    margin-top: 100px;
+    /* flex: 1; */
+    margin: 50px;
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
-    padding-bottom: 30px;
+    background-position: center;
+    background-size: cover;
 }
-#projects-code img{
-    margin: 0 25px 0 25px;
-    width: 200px;
-    height: 200px;
-    border-radius: 5px;
-}
-#projects-code img:hover{
-    filter: brightness(70%);
-    /* toggle the title to show ? */
+
+#projects-code div:hover{
+    filter: brightness(95%);
     transform: scale(1.01);
-    transition: all 200ms;
+    color: rgb(197, 174, 46);
+    transition: all 400ms;
 }
 #projects-code p,  #projects-code a{
-    width: 200px;
-    height: 10px;
-    font-size: 10px;
-    line-height: 1em;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    font-size: 1em;
+    text-align: left;
 }
+
 #projects-code a{
-    color: #7ca1a0;
+    color: #265754;
     text-decoration: none;
-    padding-top: 10px;
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: rgba(255,255,255, .7);
 }
 #projects-code a:hover{
-    color: rgb(197, 174, 46);
+    color: rgb(121, 103, 0);
     transform: scale(1.01);
-    transition: all 200ms;
-}
-#projects-code p{
+
+    transition: all 400ms;
+
 }
 
 
 
 /* ARTIST WEBSITE */
-
+#artist-website{
+    height: 100vh;
+    width: 100%;
+    background-color: #052238;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 100px 0;
+}
 #hoppie-canyon{
     width: 100%;
     height: 80vh;
 }
 
-#artist-website button{
-    background-color: #ffffff;
-    border: 1px solid gold;
-    color: #397e7a;
-    padding: 10px;
-    font-weight: bold;
+/* #artist-website{
+    background-color: rgba(255, 255, 255, 0.2);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 1em 1.5em 1em 1.5em;
+    margin: 2em;
+} */
+#artist-website a{
+
+    color: #ffffff;
+    margin: 2em;
+    letter-spacing: 0.1em;
+}
+#artist-website a:hover{
+    color: rgb(245, 209, 5);
+    border-bottom: 1px solid rgb(245, 209, 5);
+    transition: all 400ms;
 }
 
+/* #artist-website button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 400ms;
 
-#metaphor{
+} */
+
+/* METAPHOR */
+#metaphor-image{
     background-image: url(assets/leawovenhemp.JPG);
     background-size: cover;
     width: 100%;
@@ -252,17 +292,54 @@ header {
 
 /* FOOTER */
 footer{
-    height: 30px;
-    max-width: 960px;
+    height: 50px;
+    /* max-width: 960px; */
     width: 100%;
 	background-color: rgba(65, 96, 125, 0.8);
-	display: flex;
-	align-items: center;
-    justify-content: center;
     position: fixed;
     bottom: 0px;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+#footer-menu{
+    display: flex;
+	align-items: center;
+    justify-content: space-around;
+    width: 25%;
+}
+
+.fab, .fa-instagram, .fa-facebook-f, .fas, .fa-link, .fa-bandcamp, .fa-youtube,  .fa-github, .fa-linkedin-in{
+    color: #f1d8de;
+    size: 1.5em;
+}
+.fa, .fas {
+    font-weight: 900;
+  }
+  
+  .fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+  }
+  
+  .fa-2x {
+    font-size: 2em;
+  }
+  
+  .fa, .fab, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+  }
+  
+  .fa-2x {
+    font-size: 2em;
+  }
+  
 
 
 
@@ -270,11 +347,26 @@ footer{
 @media screen and (max-width: 320x) {
 	header h1 {
 		font-size: 16px;
-	}
+    }
+    #projects-code div{
+        display: block;
+        width: 100%;
+    }
+    .burger{
+        display: block;
+    }
+
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 620px) {
 	nav.menu {
 		width: 100%;
 		left: -100%; 
-	}
+    }
+    #projects-code div{
+        display: block;
+        width: 100%;
+    }
+    .burger{
+        display: block;
+    }
 }

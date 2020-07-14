@@ -27,15 +27,16 @@ fetch(url)
 
 
 const app = (data) => {
-    console.log(('app is running'))
-    console.log(data)
+    // console.log(('app is running'))
+    // console.log(data)
 
     const createProjectElement = (project) => {
         const $div = $('<div>');
-        $div.append($('<img>').attr('src', project.image));
-        $div.append($('<a>').attr('href', project.url).text(project.title));
-        $div.append($('<p>').text(project.description));
-
+        $div.css('background-image', `url(${project.image})`);
+        // $div.append($('<img>').attr('src', project.image));
+        let $div2 = $('<div>');
+        $div.append($('<a>').attr('href', project.url).text(`${project.title} - ${project.description}`));
+        // $div.append($('<p>').text(project.description));
 
         return $div
     }
@@ -44,11 +45,6 @@ const app = (data) => {
             const $projectDiv = createProjectElement(project)
             $('#projects-code').append($projectDiv);
         })
-
-
-
-
-
 }
 
 
