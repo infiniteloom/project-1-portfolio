@@ -81,9 +81,8 @@ General CSS (total 7hr):
 - Import and implement fonts (1hr)
 
 Features (total 4-5hrs):
-- Importing p5.js project for intro page animation (1hr)
 - Menu bar with flex for browser, styling (1-2hrs)
-- Sandwich bar for both mobile (1hr)
+- Sandwich bar for both mobile (3hr)
 
 Low-priority features (priority level indicated from top to bottom) (total 17-19hrs, with research):
 - Contact form design research (4hr) - how to capture the data? what happens to the information? Color, size, copy?
@@ -91,49 +90,46 @@ Low-priority features (priority level indicated from top to bottom) (total 17-19
 - Projects/intro page: Slow show text when div is centered in the downward scroll (1hr)
 - Add a slow show display style to dropdown menu for mobile onclick of sandwich bar and an option to close the menu with an X at the top right. (ref: https://www.herdl.com/) - 2-4hrs with research.
 - Further font research (1hr)
-- Creating or placing arrow graphics from about to contact form (1hr)
 - Creative loading page, if necessary? (2hr)
 
 
 
 
-#### MVP (examples)
+#### MVP
 
 JSON:
 - Pull data using google json api
 - Render data on page 
-- Allow user to choose favorite
-- Save their choices in firebase
+<!-- - Allow user to choose favorite
+- Save their choices in firebase -->
 
 Menu:
 - Menu bar with flex for browser, styling (1-2hrs)
-- Sandwich bar for both mobile (1hr)
+- Sandwich bar for both mobile (3hr)
 
 General CSS: 
-- Black background / white text with some color/ dark theme implementation (1hr)
-- Creating CSS grid, triple column thumbnails for projects (1hr)
+- Different color backgrounds for various sections 
+- Creating flex box for projects divs
 - Thumbnails styling: centering, brightness down, subtle grow on:hover (2hr)
 - Thumbnails copy for captions and styling (2hr)
 - Import and implement fonts
-	Font options: 
-		< p >: Source Code Pro; 
-		< h > SignalNo1D; ArnoPro Regular;  
-		< title > Anton?
 
 Features:
-- Importing p5.js project for intro page animation
 - Contact Form
-- Grid layout for two different categories of projects 
+- Images for intro section, quote section, about me section
+- Creative text layout section
+- YouTube video embed section
+- Sticky top menu, semi-transparent
+- Mobile sandwich dropdown menu
 
 
 
-####Post MVP:
-- Projects/intro page: Slow show text when div is centered in the downward scroll (1hr)
+#### Post MVP:
+- Sections styling: Slow show text when div is centered in the downward scroll (1hr)
 - Parallax effects, need research (3-4hrs) (darken other sections when not centered)
 - Contact form design research (4hr) - how to capture the data? what happens to the information? Color, size, copy?
 - Creative loading page, if necessary? (2hr)
 - Further font research (1hr)
-- Creating or placing arrow graphics from about section to contact form
 - Add a slow show display style to dropdown menu for mobile onclick of sandwich bar and an option to close the menu with an X at the top right. (ref: https://www.herdl.com/) - 2-4hrs with research.
 
 

@@ -5,7 +5,6 @@ html{
 body {
     background-color: #ffffff;
     margin: 0 auto;
-    /* max-width: 960px; */
     min-width: 320px;
     width: 100%;
     font-size: 15px;
@@ -33,10 +32,11 @@ a{
 }
 a:hover{
     color: grey;
-    transition: all 200ms;
+    transition: all 300ms;
 }
 header {
     width: 100%;
+    min-width: 320px;
     height: 50px;
     background-color: rgba(255, 255, 255, 0.8);
     top: 0px;
@@ -81,6 +81,7 @@ header {
 .burger{
     display:none;
     color: 	#397e7a;
+    font-size: extra-large;
 }
 
 .burger:hover{
@@ -110,12 +111,14 @@ header {
     background-color: #d9ebf4;
     height: 100vh;
     width: 100%;
-    padding: 40px;
     margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: justify;
+}
+#how-would-you p{
+    padding: 40px;
 }
 #quote{
     color: #a86561;
@@ -161,7 +164,6 @@ header {
 
 /* PROJECTS SECTION */
 #projects{
-    padding-top: 100px;
     background-color: #f1d8de;
     padding: 100px 50px 100px 50px;
 }
@@ -176,7 +178,7 @@ header {
 }
 #projects-code div{
     /* flex: 1; */
-    margin: 50px;
+    margin: 10px;
     width: 250px;
     height: 250px;
     border-radius: 5px;
@@ -250,6 +252,7 @@ header {
     margin: 2em;
     font-size: 2em;
     letter-spacing: 0.1em;
+    display: block;
 }
 #artist-website a{
     line-height: 2em;
@@ -301,12 +304,18 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 #footer-menu{
     display: flex;
 	align-items: center;
     justify-content: space-around;
     width: 25%;
+
+}
+
+#footer-menu a{
+    color: #f1d8de;
 }
 
 .fab, .fa-instagram, .fa-facebook-f, .fas, .fa-link, .fa-bandcamp, .fa-youtube,  .fa-github, .fa-linkedin-in{
@@ -344,28 +353,177 @@ footer{
 
 /* MEDIA QUERY*/
 @media screen and (max-width: 320x) {
-	header h1 {
-		font-size: 16px;
-    }
-    #projects-code div{
+    #intro #how-would-you #about #projects #video #artist-website #metaphor #contact {
+        width: 100%;
         display: block;
+    }
+
+
+
+
+
+  
+    header{
         width: 100%;
     }
+    #header-wrapper{
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 1em;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+    }
+    .title-name a{
+        padding: 0;
+    }
+    .item_menu{
+        display:none;
+        border-bottom: 1px solid #397e7a;
+        background-color: rgba(241,216,222, .9);
+        font-size: smaller;
+    }
+    .item_menu:hover{
+        background-color: rgba(218,172,183, .7);
+        transition: all 300ms;
+    }
+    .inline-menu{
+        display:block;
+        width: 100%;
+    }
+
+
+
+
+
+    #projects{
+        padding:100px 0 0 0;
+    }
+    #projects-code div{
+        width: 100%;
+        height: 250px;
+    } 
+
+
+
+
+    #how-would-you-web{
+        display: none;
+    }
+
+    #how-would-you-mobile{
+        display: block;
+    }
+
+    #artist-website {
+        width: 100%;
+        height: 80%;
+    }
+    #artist-website p{
+        padding: 0 20px 0 20px;
+    } 
+    #metaphor p{
+        padding: 0 20px 0 20px;
+        height: 70%;
+        font-size: .9em;
+    }
+
+    footer{
+        width: 100%;
+      
+    }
+    #footer-menu{
+
+        width: 100%;
+    }
+}
+@media screen and (max-width: 620px) {
+    #intro #how-would-you #about #projects #video #artist-website #metaphor #contact {
+        width: 100%;
+    }
+
+
+
+
+    header{
+        width: 100%;
+    }
+    #header-wrapper{
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 1em;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+    }
+    .title-name a{
+        padding: 0;
+    }
+    .item_menu{
+        display:none;
+        border-bottom: 1px solid #397e7a;
+        background-color: rgba(241,216,222, .9);
+        font-size: smaller;
+    }
+    .item_menu:hover{
+        background-color: rgba(218,172,183, .7);
+        transition: all 300ms;
+    }
+    .inline-menu{
+        display:block;
+        width: 100%;
+    }
+
+
+
+
+
+
+    #how-would-you{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+    }
+    #how-would-you-web{
+        display: none;
+    }
+    #how-would-you-mobile{
+        display: block;
+        height: 100%;
+    }
+
     .burger{
         display: block;
     }
 
-}
-@media screen and (max-width: 620px) {
-	nav.menu {
-		width: 100%;
-		left: -100%; 
+    #projects{
+        padding:100px 0 0 0;
     }
     #projects-code div{
-        display: block;
+        width: 100%;
+        height: 250px;
+    }
+
+    #video{
         width: 100%;
     }
-    .burger{
-        display: block;
+
+    #artist-website {
+        width: 100%;
+        height: 80%;
+    }
+    #artist-website p{
+        padding: 0 20px 0 20px;
+    } 
+
+    #metaphor p{
+        padding: 0 20px 0 20px;
+        height: 70%;
+        font-size: .9em;
+    }
+    #footer-menu{
+
+        width: 100%;
     }
 }

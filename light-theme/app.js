@@ -12,7 +12,7 @@ const url = `https://spreadsheets.google.com/feeds/list/1cPPgvKuA_8-PHICX1skEGzD
 fetch(url) 
     .then(response => response.json())
     .then(data => {
-        console.log(data.feed.entry);
+        // console.log(data.feed.entry);
         const projects = data.feed.entry.map(entry => {
             return{
                 title: entry.gsx$title.$t,
@@ -48,3 +48,25 @@ const app = (data) => {
 }
 
 
+
+// global variables for burger hide /show actions
+const $burger = $('.burger');
+const $links = $('.item_menu'); 
+let show = false;
+
+// function to handle the click event for burger menu hide/show
+const showMenu =(event) =>{
+    if(show){
+        $links.each(function(index){
+            $(this).css('display', 'none');
+        });
+        show = false;
+    }else{
+        $links.each(function(index){
+            $(this).css('display', 'block');
+        });
+        show = true;
+    }
+}
+
+$burger.on('click', showMenu);
