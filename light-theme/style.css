@@ -7,9 +7,10 @@ body {
     margin: 0 auto;
     max-width: 960px;
     min-width: 320px;
+    width: 100%;
     font-size: 15px;
-    font-family: 'Source Code Pro', monospace;
-    color: #ffffff;
+    font-family: 'EB Garamond', serif;
+    color: #397e7a;
     text-align: center;
 }
 
@@ -18,8 +19,8 @@ main{
 }
 
 p{
-    color: white;
-    font-family: 'Source Code Pro', monospace;
+    color: 	#397e7a;
+    font-family: 'EB Garamond', serif;
 }
 
 li{
@@ -27,8 +28,7 @@ li{
 }
 
 a{
-    color: white;
-    font-family: 'Source Code Pro', monospace;
+    color: 	#397e7a;
     text-decoration: none;
 }
 a:hover{
@@ -38,20 +38,21 @@ a:hover{
 header {
     height: 50px;
     max-width: 960px;
-    width: 90%;
-	background-color: rgba(0, 0, 0, 0.8);
-	border-bottom: 1px solid #ffffff;
+    width: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	/* border-bottom: 1px solid #000000; */
 	display: flex;
 	align-items: center;
     justify-content: space-between;
     position: fixed;
     top: 0px;
     z-index: 10;
+    padding: 0 20px 0 20px;
 }
 
 .title-name a{
     font-size:20px;
-
+    padding-left: 20px;
 }
 .title-name a:hover{
     color: gold;
@@ -62,10 +63,10 @@ header {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
+    padding-right: 20px;
 }
 .item_menu{
-    color: white;
+    color: 	#397e7a;
     padding: 10px;
     text-decoration: none;
 }
@@ -77,7 +78,7 @@ header {
 
 .burger{
     display:none;
-    color: white;
+    color: 	#397e7a;
 }
 
 .burger:hover{
@@ -87,6 +88,10 @@ header {
 
 /* INTRO SECTION WITH ANIMATION IFRAME */
 #intro{
+    background-image: url('assets/Lea_Portrait_Loam_2019_B_300dpi web.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
     width: 100%;
     max-width: 960px;
@@ -96,29 +101,60 @@ header {
     align-items: center;
     text-align: center;
 }
-#yinyang{
-    height: 500px;
-    width: 500px;
-    border: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+
+
+/* Text block "how would you describe your next great idea?" */
+#how-would-you{
+    background-color: #d9ebf4;
+    height: 100vh;
+    width: 100%;
+    padding: 40px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#view-projects{
-    background-color: #000000;
-    border: 1px solid gold;
-    color: #ffffff;
-    padding: 10px;
-    font-weight: bold;
+
+
+
+
+/* ABOUT SECTION */
+#about{
+    line-height: 1.3em;
+    height: 100vh;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#view-projects a:hover{
-    color: gold;
+#about-text{
+    text-align: left;
+    width: 50%;
+    padding: 50px;
 }
+#about-title{
+    font-size: 1.5em;
+    color: #e7acb7;
+}
+
+#about-tagline{
+    color: #f3d4d9;
+}
+#about-img{
+    background-image: url('assets/star_LeaThomasbyBelenPrietoBueno33.JPG');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 50%;
+}
+
 
 
 /* PROJECTS SECTION */
 #projects{
     padding-top: 100px;
+    background-color: #f1d8de;
 }
 
 #projects-code, #projects{
@@ -127,8 +163,8 @@ header {
     flex-wrap: wrap;   
     justify-content: space-around;
     align-items: center;
-    width: 90%;
-    text-align: center;
+    width: 100%;
+    text-align: left;
 }
 #projects-code div{
     margin-top: 100px;
@@ -142,11 +178,11 @@ header {
     margin: 0 25px 0 25px;
     width: 200px;
     height: 200px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 #projects-code img:hover{
-    filter: brightness(80%);
-    /* toggle the tite to show*/
+    filter: brightness(70%);
+    /* toggle the title to show ? */
     transform: scale(1.01);
     transition: all 200ms;
 }
@@ -155,36 +191,52 @@ header {
     height: 10px;
     font-size: 10px;
     line-height: 1em;
-    text-transform: uppercase;
 }
 #projects-code a{
-    color: #ffffff;
+    color: #7ca1a0;
     text-decoration: none;
     padding-top: 10px;
 }
 #projects-code a:hover{
-    color: gold;
+    color: rgb(197, 174, 46);
     transform: scale(1.01);
     transition: all 200ms;
 }
 #projects-code p{
-    font-style: italic;
 }
 
 
 
+/* ARTIST WEBSITE */
 
-/* ABOUT SECTION */
-#about{
-    line-height: 2em;
+#hoppie-canyon{
+    width: 100%;
+    height: 80vh;
+}
+
+#artist-website button{
+    background-color: #ffffff;
+    border: 1px solid gold;
+    color: #397e7a;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+#metaphor{
+    background-image: url(assets/leawovenhemp.JPG);
+    background-size: cover;
+    width: 100%;
     height: 100vh;
-    text-align: left;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-size: 1.2em;
 }
-
-
+#metaphor p{
+    color: #ffffff;
+}
 
 /* CONTACT SECTION */
 #contact{
@@ -202,9 +254,8 @@ header {
 footer{
     height: 30px;
     max-width: 960px;
-    width: 90%;
-	background-color: rgba(0, 0, 0, 0.8);
-	border-top: 1px solid #ffffff;
+    width: 100%;
+	background-color: rgba(65, 96, 125, 0.8);
 	display: flex;
 	align-items: center;
     justify-content: center;
