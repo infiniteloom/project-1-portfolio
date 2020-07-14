@@ -216,11 +216,21 @@ header {
 
 }
 
-
+/* VIDEO */
+#video{
+    margin:0;
+    background-color: #052238;
+}
+#hoppie-canyon{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 
 /* ARTIST WEBSITE */
 #artist-website{
-    height: 100vh;
+    height: 40vh;
     width: 100%;
     background-color: #052238;
     display: flex;
@@ -230,40 +240,29 @@ header {
     align-items: center;
     padding: 100px 0 100px 0;
 }
-#hoppie-canyon{
-    width: 100%;
-    height: 80vh;
+
+
+#artist-website{
+    margin: 0;
 }
-
-/* #artist-website{
-    background-color: rgba(255, 255, 255, 0.2);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-transform: uppercase;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    padding: 1em 1.5em 1em 1.5em;
+#artist-website a span{
+    color: #faf7db;
     margin: 2em;
-} */
-#artist-website a{
-
-    color: #ffffff;
-    margin: 2em;
+    font-size: 2em;
     letter-spacing: 0.1em;
 }
-#artist-website a:hover{
+#artist-website a{
+    line-height: 2em;
+}
+#artist-website a span:hover{
     color: rgb(245, 209, 5);
     border-bottom: 1px solid rgb(245, 209, 5);
-    transition: all 400ms;
+    transition: all 600ms;
 }
 
-/* #artist-website button:hover{
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: all 400ms;
-
-} */
 
 /* METAPHOR */
-#metaphor-image{
+#metaphor{
     background-image: url(assets/leawovenhemp.JPG);
     background-size: cover;
     width: 100%;
