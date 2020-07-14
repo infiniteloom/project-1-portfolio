@@ -9,22 +9,25 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |  Day | Deliverable | Status
 |---|---| ---|
 |Day 1| Project Description | Complete
-|Day 1| Wireframes / Priority Matrix / Timeline | Complete
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4| MVP & Bug Fixes | Incomplete
+|Day 2| Wireframes / Priority Matrix / Timeline | Complete
+|Day 3| Core Application Structure (HTML, CSS, etc.) | Complete
+|Day 4| MVP & Bug Fixes | Complete
 |Day 5| Final Touches | Incomplete
 |Day 6| Present | Incomplete
 
 
 ## Project Description
 
-My dark-themed website will have a landing page with a partly-transparent black-background sticky top menu ('projects', 'about', 'contact'), a central animation (p5.js) on the intro page with a call-to-action: 'view projects'. 
+My website will have a landing page with a semi-transparent white background header- title to the left and menu to the top right (lea thomas    'projects', 'about', 'contact').
+This intro section will have a 100% wide image of myself with weavings. 
+
+The website is an infinite scroll display that jumps to sections when links are clicked. There will be additional unlinked sections that showcase my artistic projects. 
 
 Emphasis on creative displays, i.e. implementing on:hover darkening, slow show and grow effects (darkening would be on click for mobile) to create a sense of transition while the endless scroll projects page spans different sections/project thumbnails/divs.
 
-Continuing to scroll down will lead to the about page and the contact form. 
+Continuing to scroll down will lead to the about page, some creative sections to showcase my artistic work and the contact form. 
 
-Bonus if I can figure out how to click on the menu item and have the browser jump down to a section of the page. 
+Bonus if I can figure out how to click on the menu item and have the browser jump down to a section of the page. (Nailed it!)
 
 
 Inspiration:
@@ -35,11 +38,8 @@ https://www.crema.us/contact
 - Three column project thumbnail with slow-show text when div is centered on page. 
 https://yardnyc.com/
 
-- Landing page animation feature:
-https://www.neundex.com/projects/
-
-- Dark theme and copy: 
-https://www.neundex.com/about/
+- Color scheme:
+https://loamlove.com
 
 
 
