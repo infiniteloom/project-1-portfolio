@@ -70,3 +70,4 @@ const showMenu =(event) =>{
 }
 
 $burger.on('click', showMenu);
+$links.on('click', showMenu);
