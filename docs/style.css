@@ -43,7 +43,6 @@ header {
     z-index: 10;
     position: fixed;
     text-align: center;
-   
 }
 
 #header-wrapper{
@@ -54,7 +53,7 @@ header {
     justify-content: space-between;
     padding: 0 20px 0 20px;
      /* scroll-animations keywords */
-     transition: opacity .3s .25s ease-out;
+     transition: opacity 3s .25s ease-out;
      opacity: 0;
      will-change: opacity;
 }
@@ -109,7 +108,7 @@ header {
     height: 100vh;
     width: 100%;
     margin: 0 auto;
-    opacity: 0.6;
+    opacity: 0.8;
     transition: opacity 3s .25s ease-out;
     will-change: opacity;
 }
@@ -128,9 +127,6 @@ header {
     justify-content: center;
     align-items: center;
     text-align: justify;
-    /* opacity: 0.6;
-    transition: opacity 1s .25s ease-out;
-    will-change: opacity; */
 }
 
 #how-would-you p{
@@ -141,9 +137,7 @@ header {
     will-change: opacity;
 }
 #how-would-you-web{
-
     width: 90%;
-
 }
 #how-would-you-mobile{
     display:none;
@@ -182,36 +176,85 @@ header {
     font-style: normal;
 }
 
+
+
+
+
+
 /* ABOUT SECTION */
 #about{
     line-height: 1.3em;
     height: 100vh;
-    text-align: left;
+    /* text-align: left;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    position: relative;
+
 }
 #about-text{
     text-align: left;
-    width: 50%;
+    width: 40%;
     padding: 50px;
+    position: absolute;
+    left: 0;
+}
+#about-text h2, #about-text p{
+    opacity: 0.5;
 }
 #about-title{
     font-size: 1.5em;
-    color: #e7acb7;
+    color: #ce929d;
+    transform: translate(-30px,0);
+    -webkit-transform: translate(-30px,0); 
+    -o-transform: translate(-30px,0);
+    -moz-transform: translate(-30px,0); 
 }
 
 #about-tagline{
-    color: #e2bbc2;
+    color: #e7acb7;
+    transform: translate(-30px,0);
+    -webkit-transform: translate(-30px,0); 
+    -o-transform: translate(-30px,0);
+    -moz-transform: translate(-30px,0); 
 }
 #about-img-web{
     background-image: url('assets/star_LeaThomasbyBelenPrietoBueno33.JPG');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    position: absolute;
+    right: 0;
     height: 100vh;
-    width: 50%;
+    width: 40%;
+    opacity: 0.6;
+    transition: all 3s .3s ease-out;
 }
+#about-text.is-visible p, #about-text.is-visible h2{
+    opacity:1;
+    transition: all 2s .3s ease-out;
+}
+#about-title.is-visible{
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0); 
+    -o-transform: translate(0,0); 
+    -moz-transform: translate(0,0); 
+    transition: all 1s .3s ease-out;
+    opacity:1;
+}
+#about-tagline.is-visible{
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0); 
+    -o-transform: translate(0,0); 
+    -moz-transform: translate(0,0); 
+    transition: all .5s .3s ease-out;
+    opacity:1;
+}
+#about-img-web.is-visible{
+    width: 50%;
+    opacity:1;
+}
+
 
 #about-img-mobile{
     background-image: url('assets/star_LeaThomasbyBelenPrietoBueno33.JPG');
@@ -232,7 +275,6 @@ header {
 }
 
 #projects-code{
-    /* max-width: 960px; */
     display: flex;
     flex-wrap: wrap;   
     justify-content: space-around;
@@ -240,7 +282,6 @@ header {
     width: 100%;
 }
 #projects-code div{
-    /* flex: 1; */
     margin: 10px;
     width: 250px;
     height: 250px;
@@ -276,9 +317,7 @@ header {
 #projects-code a:hover{
     color: rgb(121, 103, 0);
     transform: scale(1.01);
-
     transition: all 400ms;
-
 }
 
 /* VIDEO */
