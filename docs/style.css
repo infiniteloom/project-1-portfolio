@@ -129,12 +129,14 @@ header {
     padding: 2em;
     max-width: 960px;
     color: #9cb7c5;
+    transition: opacity 2s .25s ease-out;
+    opacity: 0;
+    will-change: opacity;
 }
 
 #how-would-you-mobile{
     display:none;
     max-width: 320px;
-
 }
 #how-would-you-mobile p{
     padding: 2em;
@@ -152,6 +154,15 @@ header {
     font-weight: bold;
     font-size: 1em;
 }
+
+  
+#how-would-you .is-visible p{
+    filter: brightness(100%);
+    opacity: 1;
+  }
+  /* #how-would-you-mobile p.is-visible {
+    opacity: 1;
+  } */
 
 
 
