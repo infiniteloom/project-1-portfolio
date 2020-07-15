@@ -87,16 +87,26 @@ function isElementInViewport(el) {
       el = el[0];
     }
     var rect = el.getBoundingClientRect();
+    // return (
+    //   (rect.top <= 0
+    //     && rect.bottom >= 0)
+    //   ||
+    //   (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+    //     rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    //   ||
+    //   (rect.top >= 0 &&
+    //     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+    // );
     return (
-      (rect.top <= 0
-        && rect.bottom >= 0)
-      ||
-      (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-      ||
-      (rect.top >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-    );
+        (rect.top <= 30
+          && rect.bottom >= 30)
+        ||
+        (rect.bottom >= (window.innerHeight -30 || document.documentElement.clientHeight -30) &&
+          rect.top <= (window.innerHeight -30 || document.documentElement.clientHeight -30))
+        ||
+        (rect.top >= 30 &&
+          rect.bottom <= (window.innerHeight -30 || document.documentElement.clientHeight -30))
+      );
   }
 
 

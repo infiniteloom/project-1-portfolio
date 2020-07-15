@@ -109,63 +109,78 @@ header {
     height: 100vh;
     width: 100%;
     margin: 0 auto;
+    opacity: 0.6;
+    transition: opacity 3s .25s ease-out;
+    will-change: opacity;
 }
+#intro.is-visible{
+    opacity: 1;
+  }
 
 
 /* Text block "how would you describe your next great idea?" */
 #how-would-you{
     background-color: #d9ebf4;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
-    filter: brightness(90%);
     margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: justify;
+    /* opacity: 0.6;
+    transition: opacity 1s .25s ease-out;
+    will-change: opacity; */
 }
 
 #how-would-you p{
-    padding: 2em;
     max-width: 960px;
     color: #9cb7c5;
     transition: opacity 2s .25s ease-out;
     opacity: 0;
     will-change: opacity;
 }
+#how-would-you-web{
 
+    width: 90%;
+
+}
 #how-would-you-mobile{
     display:none;
     max-width: 320px;
+    height: 100%;
 }
 #how-would-you-mobile p{
-    padding: 2em;
     max-width: 300px;
     color: #9cb7c5;
 }
-.mobile-quote{
+.mobile-quote a{
     color: #a86561;
     font-weight: bold;
     font-style: normal;
+    transition: all 2s .25s ease-out;
 }
-
-.quote{
+ 
+.quote a{
     color: #a86561;
     font-weight: bold;
     font-size: 1em;
+    font-style: normal;
 }
-
+.quote a:hover, .mobile-quote a:hover{
+    color: #397e7a;
+    transition: all .25s .25s ease-out;
+}
   
 #how-would-you .is-visible p{
-    filter: brightness(100%);
     opacity: 1;
   }
-  /* #how-would-you-mobile p.is-visible {
-    opacity: 1;
-  } */
-
-
-
+.quote.is-visible{
+    font-style: normal;
+}
+.mobile-quote.is-visible{
+    font-style: normal;
+}
 
 /* ABOUT SECTION */
 #about{
@@ -465,10 +480,12 @@ footer{
 @media screen and (max-width: 320x) {
     #intro #how-would-you #about #projects #video #artist-website #metaphor #contact {
         width: 100%;
-        display: block;
+
     }
 
-
+    #intro{
+        height: 100vh;
+    }
 
 
 
@@ -506,16 +523,19 @@ footer{
 
 
 
+    #how-would-you{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
     #how-would-you-web{
         display: none;
     }
-
     #how-would-you-mobile{
         display: block;
+        height: 100%;
     }
-    /* #how-would-you-mobile-text{
-        width: 80%;
-    } */
 
 
 
@@ -605,6 +625,9 @@ footer{
         width: 100%;
     }
 
+    #intro{
+        height: 100vh;
+    }
 
 
 
@@ -648,7 +671,7 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
-
+        height: 100%;
     }
     #how-would-you-web{
         display: none;
@@ -657,9 +680,6 @@ footer{
         display: block;
         height: 100%;
     }
-    /* #how-would-you-mobile-text{
-        width: 80%;
-    } */
 
 
 
