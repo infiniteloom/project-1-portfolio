@@ -230,6 +230,10 @@ header {
     opacity: 0.6;
     transition: all 3s .3s ease-out;
 }
+#about-img-mobile{
+    opacity: 0.6;
+    transition: all 2s .3s ease-out;
+}
 #about-text.is-visible p, #about-text.is-visible h2{
     opacity:1;
     transition: all 2s .3s ease-out;
@@ -252,6 +256,9 @@ header {
 }
 #about-img-web.is-visible{
     width: 50%;
+    opacity:1;
+}
+#about-img-mobile.is-visible{
     opacity:1;
 }
 
@@ -567,6 +574,8 @@ footer{
         align-items: center;
         justify-content: center;
         height: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     #how-would-you-web{
         display: none;
@@ -592,6 +601,8 @@ footer{
     }
     #about-text{
         width: 80%;
+        position: relative;
+        transition: all .25s .25s ease-out;
     }
     #about-img-web{
         display: none;
@@ -711,13 +722,14 @@ footer{
         align-items: center;
         justify-content: center;
         height: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     #how-would-you-web{
         display: none;
     }
     #how-would-you-mobile{
         display: block;
-        height: 100%;
     }
 
 
@@ -729,12 +741,16 @@ footer{
         justify-content: center;
         align-items: center;
         text-align: center;
-        height: 100%;
         width: 100%;
+        height: 100%;
         background-color: #dbe6e5;
     }
     #about-text{
         width: 80%;
+        position: relative;
+    }
+    #about-text.is-visible p{ 
+        transition: opacity .2s .25s ease-out;
     }
     #about-img-web{
         display: none;
