@@ -296,11 +296,15 @@ header {
 
 /* PROJECTS SECTION */
 #projects{
-    background-color: #faeef1;
+
+    background-color: #ffffff;
     padding: 100px 50px 100px 50px;
 }
 
 #projects-code{
+    border-top: 1px solid rgb(226, 176, 184);
+    border-bottom: 1px solid rgb(226, 176, 184);
+    padding: 40px 0 40px 0;
     display: flex;
     flex-wrap: wrap;   
     justify-content: space-around;
@@ -308,10 +312,10 @@ header {
     width: 100%;
 }
 #projects-code div{
-    margin: 10px;
-    width: 250px;
+    margin: 5px;
+    width: 30%;
     height: 250px;
-    border-radius: 5px;
+    border-radius: 2px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -405,11 +409,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    filter: brightness(80%);
+    transition: all 1.5s .5s ease-in-out;
     font-size: 1.2em;
 }
 #metaphor p{
     color: #ffffff;
+}
+#metaphor.is-visible{
+    filter: brightness(100%);
 }
 
 /* CONTACT SECTION */
@@ -569,19 +577,18 @@ footer{
         /* flex-direction: column; */
     }
     .title-name a{
-        padding-left: 10px;
+        padding: 0;
         width: 50%;
     }
     .item_menu{
         display:none;
-        /* border-bottom: 1px solid #397e7a; */
+        /* border-bottom: 1px solid rgba(255, 255, 255, 0.9); */
         background-color: rgba(241,216,222, .9);
         font-size: smaller;
         padding: 1em 0 1em 0;
     }
-    .item_menu:hover{
-        background-color: rgba(218,172,183, .7);
-        transition: all 300ms;
+    .last-item-menu{
+        padding-bottom: 30px;
     }
     .inline-menu{
         display:block;
@@ -593,6 +600,16 @@ footer{
     .close{
         display:none;
         text-align: right;
+        background-color: rgba(241,216,222, .9);
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 50px;
+    }
+    .close a {
+        padding-right: 10%;
+        color: rgba(141, 97, 108, 0.9);
+        font-family: Arial, Helvetica, sans-serif;
     }
     .mobile-menu{
         position: fixed;
@@ -653,7 +670,7 @@ footer{
 
 
     #projects{
-        padding:100px 0 0 0;
+        padding:100px 0 100px 0;
     }
     #projects-code div{
         width: 100%;
@@ -666,11 +683,14 @@ footer{
     #artist-website {
         width: 100%;
         height: 80%;
+        margin: 0;
     }
     #artist-website p,   #artist-website a span{
-        width: 90%;
+        width: 100%;
         margin: 0;
     } 
+
+
     #metaphor p{
         padding: 0 20px 0 20px;
         height: 70%;
@@ -730,33 +750,41 @@ footer{
         margin: 0;
     }
     .title-name a{
-        padding-left: 10px;
+        padding: 0px;
         width: 50%;
     }
     .item_menu{
         display:none;
-        /* border-bottom: 1px solid #397e7a; */
+        /* border-bottom: 1px solid rgba(255, 255, 255, 0.9); */
         background-color: rgba(241,216,222, .9);
         font-size: smaller;
         padding: 1em 0 1em 0;
     }
-    .item_menu:hover{
-        background-color: rgba(218,172,183, .7);
-        transition: all 300ms;
-        color: black;
+    .last-item-menu{
+        padding-bottom: 30px;
     }
-
     .burger{
         display: block;
     }
     .close{
         display:none;
         text-align: right;
+        background-color: rgba(241,216,222, .9);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50px;
+    }
+    .close a {
+        font-size: 1.3em;
+        padding-right: 15%;
+        color: rgba(141, 97, 108, 0.9);
+        font-family: Arial, Helvetica, sans-serif;
     }
     .mobile-menu{
         position: fixed;
         margin: 0px;
-        top: 50px;
+        top: 70px;
         width: 100%;
         height: 100vh;
     }
@@ -790,13 +818,13 @@ footer{
         align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: 50%;
         background-color: #dbe6e5;
     }
     #about-text{
         width: 90%;
         padding: 5%;
-        height: 100%;
+        display: block;
         position: relative;
     }
     #about-text.is-visible p{ 
@@ -804,6 +832,7 @@ footer{
     }
     #about-img-web{
         display: none;
+
     }
     #about-img-mobile{
         display: block;
@@ -814,26 +843,55 @@ footer{
 
 
     #projects{
-        padding:100px 0 0 0;
+        padding:100px 0 100px 0;
     }
     #projects-code div{
         width: 100%;
         height: 250px;
     }
 
+
+
+
+
     #video{
         width: 100%;
     }
 
+
+
+    
+
     #artist-website {
         width: 100%;
         height: 80%;
+        margin: 0;
     }
 
-    #artist-website p,   #artist-website a span{
-        width: 90%;
+    #artist-website p,   #artist-website p a span{
+        width: 100%;
         margin: 0;
     } 
+
+
+
+
+#photography{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    "a a b b c c c c"
+    "a a b b c c c c"
+    "a a d d e e f f"
+    "a a d d e e f f"
+    "g g g g h h f f"
+    "g g g g h h f f";
+}
+
+
+
+
 
     #metaphor p{
         padding: 0 20px 0 20px;
