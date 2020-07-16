@@ -121,6 +121,7 @@ header {
     font-size: 1.5em;
 }
 .mobile-menu-show{
+    display:none;
     margin-left: -100vh;
     padding: 10% 10px 20% 10px;
     -webkit-transition: margin-left .5s 350ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
@@ -621,12 +622,7 @@ footer{
     .burger{
         display: block;
     }
-/* 
-    .mobile-menu-show{
-        display: none;
-        margin-left: -100vh;
-        padding: 10% 10px 20% 10px;
-    } */
+
     .mobile-menu-back{
         position: fixed;
         margin-left: -100vh;
@@ -823,12 +819,6 @@ footer{
     .burger{
         display: block;
     }
-/*     
-    .mobile-menu-show{
-        display: none;
-        margin-left: -100vh;
-        padding: 10% 10px 20% 10px;
-    } */
     .mobile-menu-back{
         position: fixed;
         margin-left: -100vh;
