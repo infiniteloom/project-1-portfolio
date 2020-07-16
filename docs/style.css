@@ -53,8 +53,7 @@ header {
     justify-content: space-between;
     padding: 0 20px 0 20px;
      /* scroll-animations keywords */
-     transition: opacity 3s .25s ease-out
-                 width ;
+     transition: opacity 3s .25s ease-out;
 
      opacity: 0;
      will-change: opacity;
@@ -567,6 +566,7 @@ footer{
   
     header{
         width: 100%;
+        height: 100%;
     }
     #header-wrapper{
         justify-content: space-around;
@@ -574,7 +574,7 @@ footer{
         padding-top: 1em;
         padding: 0;
         margin: 0;
-        /* flex-direction: column; */
+        height: 100%;
     }
     .title-name a{
         padding: 0;
@@ -602,9 +602,9 @@ footer{
         text-align: right;
         background-color: rgba(241,216,222, .9);
         width: 100%;
-        height: 20px;
-        position: absolute;
-        top: 50px;
+        height: 30px;
+        position: fixed;
+        top: 0;
     }
     .close a {
         padding-right: 10%;
@@ -614,9 +614,9 @@ footer{
     .mobile-menu{
         position: fixed;
         margin: 0px;
-        top: 50px;
+        top: 30px;
         width: 100%;
-        height: 100vh;
+        height: 100%;
     }
     
 
@@ -757,6 +757,7 @@ footer{
         display:none;
         /* border-bottom: 1px solid rgba(255, 255, 255, 0.9); */
         background-color: rgba(241,216,222, .9);
+        /* transition: background 1s .25s ease-out; */
         font-size: smaller;
         padding: 1em 0 1em 0;
     }
@@ -766,13 +767,14 @@ footer{
     .burger{
         display: block;
     }
-    .close{
+    /* .close{
         display:none;
         text-align: right;
         background-color: rgba(241,216,222, .9);
         width: 100%;
         height: 100%;
-        position: absolute;
+        position: relative;
+        float: right;
         top: 50px;
     }
     .close a {
@@ -787,8 +789,28 @@ footer{
         top: 70px;
         width: 100%;
         height: 100vh;
+    } */
+    .close{
+        display:none;
+        text-align: right;
+        background-color: rgba(241,216,222, .9);
+        width: 100%;
+        height: 30px;
+        position: fixed;
+        top: 0;
     }
-
+    .close a {
+        padding-right: 10%;
+        color: rgba(141, 97, 108, 0.9);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .mobile-menu{
+        position: fixed;
+        margin: 0px;
+        top: 30px;
+        width: 100%;
+        height: 100%;
+    }
 
 
 

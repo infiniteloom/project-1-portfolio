@@ -70,7 +70,7 @@ const showMenu =(event) =>{
                 $burger.css('display', 'block');  
                 $('nav').removeClass('mobile-menu')
                 $('nav').addClass('inline-menu');
-
+                $('.title-name').css('display','block');
                 $links.each(function(index){
                     $(this).css('display', 'none');
                 });
@@ -84,6 +84,7 @@ const showMenu =(event) =>{
                 $('.close').css('display', 'block');
                 $('nav').removeClass('inline-menu');
                 $('nav').addClass('mobile-menu');
+                $('.title-name').css('display','none');
                 // $('nav').removeClass('inline-menu').css('position', 'fixed').css('margin', '0').css('top','50px').css('width','100%');
                 $burger.css('display', 'none')
             });
@@ -136,20 +137,23 @@ function isElementInViewport(el) {
 
 let scroll = window.requestAnimationFrame ||
     function(callback){ window.setTimeout(callback, 1000/60)};
-
-
 let elementsToShow = document.querySelectorAll('.show-on-scroll');
 
 
 const loop = () =>{
     elementsToShow.forEach(element =>{
-        if(isElementInViewport(element)){
-            element.classList.add('is-visible');
+        if(element === $('header') || element === $('#about')){
+            console.log('the header is always visible')
+                element.classList.add('is-visible');
         }else{
-            element.classList.remove('is-visible');
+            if(isElementInViewport(element)){
+                element.classList.add('is-visible');
+            }else{
+                element.classList.remove('is-visible');
+            }
         }
-    });
 
+    });
     scroll(loop);
 }
 
