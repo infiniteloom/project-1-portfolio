@@ -53,13 +53,18 @@ header {
     justify-content: space-between;
     padding: 0 20px 0 20px;
      /* scroll-animations keywords */
-     transition: opacity 3s .25s ease-out;
+     transition: opacity 3s .25s ease-out
+                 width ;
+
      opacity: 0;
      will-change: opacity;
 }
 #header-wrapper.is-visible {
     opacity: 1;
-  }
+
+    }
+
+  
 .title-name a{
     font-size:20px;
     padding-left: 20px;
@@ -97,6 +102,9 @@ header {
 .burger:hover{
     color: gold;
 }
+.close{
+    display: none;
+}
 
 
 /* INTRO SECTION WITH ANIMATION IFRAME */
@@ -130,7 +138,8 @@ header {
 }
 
 #how-would-you p{
-    max-width: 960px;
+    width: 100%;
+
     color: #9cb7c5;
     transition: opacity 2s .25s ease-out;
     opacity: 0;
@@ -138,6 +147,7 @@ header {
 }
 #how-would-you-web{
     width: 90%;
+    max-width: 960px;
 }
 #how-would-you-mobile{
     display:none;
@@ -219,6 +229,7 @@ header {
     -moz-transform: translate(-30px,0); 
 }
 #about-img-web{
+    width: 48%;
     background-image: url('assets/star_LeaThomasbyBelenPrietoBueno33.JPG');
     background-position: top;
     background-repeat: no-repeat;
@@ -226,9 +237,12 @@ header {
     position: absolute;
     right: 0;
     height: 100vh;
-    width: 40%;
     opacity: 0.6;
-    transition: all 3s .3s ease-out;
+    /* transition: all 2s .3s ease-out; */
+    transform: translate(15px,0);
+    -webkit-transform: translate(15px,0); 
+    -o-transform: translate(15px,0);
+    -moz-transform: translate(15px,0); 
 }
 #about-img-mobile{
     opacity: 0.6;
@@ -257,6 +271,11 @@ header {
 #about-img-web.is-visible{
     width: 50%;
     opacity:1;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0); 
+    -o-transform: translate(0,0); 
+    -moz-transform: translate(0,0); 
+    transition: all 1.5s .3s ease-out;
 }
 #about-img-mobile.is-visible{
     opacity:1;
@@ -277,7 +296,7 @@ header {
 
 /* PROJECTS SECTION */
 #projects{
-    background-color: #f1d8de;
+    background-color: #faeef1;
     padding: 100px 50px 100px 50px;
 }
 
@@ -351,26 +370,30 @@ header {
     align-items: center;
     padding: 100px 0 100px 0;
 }
-
-
 #artist-website{
     margin: 0;
 }
-#artist-website a span{
+#artist-website p a span{
     color: #faf7db;
     margin: 2em;
-    font-size: 2em;
+    font-size: 1.3em;
     letter-spacing: 0.1em;
     display: block;
 }
-#artist-website a{
-    line-height: 2em;
+#artist-website p{
+    color: #9ac0be;
+    opacity: 0;
+    transition: all 3s .25s ease-out;
 }
-#artist-website a span:hover{
+#artist-website p a span:hover{
     color: rgb(245, 209, 5);
-    border-bottom: 1px solid rgb(245, 209, 5);
-    transition: all 600ms;
+    text-decoration: underline;
 }
+#artist-website.is-visible p{
+    opacity:1;
+    transition: all 2s .25s ease-out;
+}
+
 
 
 /* METAPHOR */
@@ -434,23 +457,22 @@ header {
     color: #397e7a;
 }
 
+#submit{
+    text-align: right;
+}
 #submit button{
     width: 100px;
-    border: 1px solid #a86561;
+    border: 1px solid #f5e3e2;
     border-radius: 5px;
-    background-color: rgba(255,255,255, 0.7);  
+    background-color: rgba(243, 229, 229, 0.7);  
     font-family: 'EB Garamond', serif;
     margin-top: 10px;
     height: 2em;
-    padding-left: 170px;
-}
-
-#submit button p{
-    font-family: 'EB Garamond', serif;
     font-weight: bold;
+    color: #397e7a;
 }
 #submit button:hover{
-    background-color: rgba(169,169,169, .8);  
+    background-color: rgba(218, 214, 214, 0.8);  
     transition: all 400ms;
 }
 
@@ -524,9 +546,8 @@ footer{
 
 /* MEDIA QUERY*/
 @media screen and (max-width: 320x) {
-    #intro #how-would-you #about #projects #video #artist-website #metaphor #contact {
+    #intro, #how-would-you, #about, #projects, #artist-website, #metaphor, #contact {
         width: 100%;
-
     }
 
     #intro{
@@ -545,16 +566,18 @@ footer{
         padding-top: 1em;
         padding: 0;
         margin: 0;
-        flex-direction: column;
+        /* flex-direction: column; */
     }
     .title-name a{
-        padding: 0;
+        padding-left: 10px;
+        width: 50%;
     }
     .item_menu{
         display:none;
-        border-bottom: 1px solid #397e7a;
+        /* border-bottom: 1px solid #397e7a; */
         background-color: rgba(241,216,222, .9);
         font-size: smaller;
+        padding: 1em 0 1em 0;
     }
     .item_menu:hover{
         background-color: rgba(218,172,183, .7);
@@ -564,8 +587,21 @@ footer{
         display:block;
         width: 100%;
     }
-
-
+    .burger{
+        display: block;
+    }
+    .close{
+        display:none;
+        text-align: right;
+    }
+    .mobile-menu{
+        position: fixed;
+        margin: 0px;
+        top: 50px;
+        width: 100%;
+        height: 100vh;
+    }
+    
 
 
 
@@ -600,7 +636,9 @@ footer{
         background-color: #dbe6e5;
     }
     #about-text{
-        width: 80%;
+        width: 90%;
+        padding: 5%;
+        height: 100%;
         position: relative;
         transition: all .25s .25s ease-out;
     }
@@ -629,8 +667,9 @@ footer{
         width: 100%;
         height: 80%;
     }
-    #artist-website p{
-        padding: 0 20px 0 20px;
+    #artist-website p,   #artist-website a span{
+        width: 90%;
+        margin: 0;
     } 
     #metaphor p{
         padding: 0 20px 0 20px;
@@ -687,32 +726,40 @@ footer{
     #header-wrapper{
         justify-content: space-around;
         align-items: center;
-        padding-top: 1em;
-        padding: 0;
+        padding: 1em 0 0 0;
         margin: 0;
-        flex-direction: column;
     }
     .title-name a{
-        padding: 0;
+        padding-left: 10px;
+        width: 50%;
     }
     .item_menu{
         display:none;
-        border-bottom: 1px solid #397e7a;
+        /* border-bottom: 1px solid #397e7a; */
         background-color: rgba(241,216,222, .9);
         font-size: smaller;
+        padding: 1em 0 1em 0;
     }
     .item_menu:hover{
         background-color: rgba(218,172,183, .7);
         transition: all 300ms;
+        color: black;
     }
-    .inline-menu{
-        display:block;
-        width: 100%;
-    }
+
     .burger{
         display: block;
     }
-
+    .close{
+        display:none;
+        text-align: right;
+    }
+    .mobile-menu{
+        position: fixed;
+        margin: 0px;
+        top: 50px;
+        width: 100%;
+        height: 100vh;
+    }
 
 
 
@@ -722,6 +769,7 @@ footer{
         align-items: center;
         justify-content: center;
         height: 100%;
+        width: 100%;
         padding-top: 50px;
         padding-bottom: 50px;
     }
@@ -746,7 +794,9 @@ footer{
         background-color: #dbe6e5;
     }
     #about-text{
-        width: 80%;
+        width: 90%;
+        padding: 5%;
+        height: 100%;
         position: relative;
     }
     #about-text.is-visible p{ 
@@ -779,8 +829,10 @@ footer{
         width: 100%;
         height: 80%;
     }
-    #artist-website p{
-        padding: 0 20px 0 20px;
+
+    #artist-website p,   #artist-website a span{
+        width: 90%;
+        margin: 0;
     } 
 
     #metaphor p{

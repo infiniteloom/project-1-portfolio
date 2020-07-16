@@ -12,7 +12,7 @@ const url = `https://spreadsheets.google.com/feeds/list/1cPPgvKuA_8-PHICX1skEGzD
 fetch(url) 
     .then(response => response.json())
     .then(data => {
-        console.log(`data is ${data.feed.entry}`);
+        // console.log(`data is ${data.feed.entry}`);
         const projects = data.feed.entry.map(entry => {
             return{
                 title: entry.gsx$title.$t,
@@ -52,26 +52,50 @@ const app = (data) => {
 // global variables for burger hide /show actions
 const $burger = $('.burger');
 const $links = $('.item_menu'); 
+const $close = $('.close');
 let show = false;
 
 // function to handle the click event for burger menu hide/show
 const showMenu =(event) =>{
-    if(show){
-        $links.each(function(index){
-            $(this).css('display', 'none');
-        });
-        show = false;
+    let width = window.innerWidth;
+    // console.log(width)
+    if(width < 400){
+        // console.log('this is smaller than 400')
+        if(show){
+            if($(this)=== $burger || $(this) === $links ){
+                
+                show = false;
+             }else{
+                $('.close').css('display', 'none');
+                $burger.css('display', 'block');  
+                $('nav').removeClass('mobile-menu')
+                $('nav').addClass('inline-menu');
+
+                $links.each(function(index){
+                    $(this).css('display', 'none');
+                });
+
+             }
+             show = false;
+            
+        }else{
+            $links.each(function(index){
+                $(this).css('display', 'block');
+                $('.close').css('display', 'block');
+                $('nav').removeClass('inline-menu');
+                $('nav').addClass('mobile-menu');
+                // $('nav').removeClass('inline-menu').css('position', 'fixed').css('margin', '0').css('top','50px').css('width','100%');
+                $burger.css('display', 'none')
+            });
+            show = true;        }
     }else{
-        $links.each(function(index){
-            $(this).css('display', 'block');
-        });
-        show = true;
+        return
     }
 }
 
 $burger.on('click', showMenu);
 $links.on('click', showMenu);
-
+$close.on('click', showMenu);
 
 
 
