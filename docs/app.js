@@ -52,6 +52,7 @@ const app = (data) => {
 // global variables for burger hide /show actions
 const $burger = $('.burger');
 const $links = $('.item_menu'); 
+const $mobileLinks = $('.mobile-menu-links');
 const $close = $('.close');
 let show = false;
 
@@ -68,25 +69,36 @@ const showMenu =(event) =>{
                 $('.close').css('display', 'none');
                 $burger.css('display', 'block');    
                 $('.inline-menu').css('display', 'block');
-                $('.mobile-menu-show').css('display', 'none');
+                // $('.mobile-menu-show').css('display', 'none');
+                $('.mobile-menu-back').css('margin-left','-100vh');
+                $('.mobile-menu-show').css('margin-left','-100vh');
                 $('.title-name').css('display','block');
+
                 $links.each(function(index){
                     $(this).css('display', 'none');
                 });
-
+                $mobileLinks.each(function(index){
+                    $(this).css('display', 'none');
+                });
              }
              show = false;
             
         }else{
-            $links.each(function(index){
+            $('.close').css('display', 'block');
+            $('.inline-menu').css('display', 'none');
+            // $('.mobile-menu-show').css('display','block');
+            $('.mobile-menu-back').css('margin-left','0');
+            $('.mobile-menu-show').css('margin-left','0');
+            $('.title-name').css('display','none');
+            $burger.css('display', 'none');
+            // $links.each(function(index){
+            //     $(this).css('display', 'block');
+            // });
+            $mobileLinks.each(function(index){
                 $(this).css('display', 'block');
-                $('.close').css('display', 'block');
-                $('.inline-menu').css('display', 'none');
-                $('.mobile-menu-show').css('display','block');
-                $('.title-name').css('display','none');
-                $burger.css('display', 'none')
             });
-            show = true;        }
+            show = true;        
+        }
     }else{
         return
     }
@@ -95,7 +107,7 @@ const showMenu =(event) =>{
 $burger.on('click', showMenu);
 $links.on('click', showMenu);
 $close.on('click', showMenu);
-
+$mobileLinks.on('click', showMenu);
 
 
 

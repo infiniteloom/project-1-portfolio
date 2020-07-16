@@ -102,12 +102,28 @@ header {
     color: gold;
 }
 .close{
-    display: none;
+    display:none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1005;
+    padding: 22px;
+    line-height: 0;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+}
+.close a{
+    width: 20px;
+    height: 20px;
+    color: rgba(141, 97, 108, 0.9);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
 }
 .mobile-menu-show{
-    display: none;
+    margin-left: -100vh;
+    transition: all .5s .25s ease-in-out;
 }
-
 
 /* INTRO SECTION WITH ANIMATION IFRAME */
 #intro{
@@ -197,6 +213,10 @@ header {
 #about{
     line-height: 1.3em;
     height: 100vh;
+    /* text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
     position: relative;
 
 }
@@ -236,12 +256,16 @@ header {
     right: 0;
     height: 100vh;
     opacity: 0.6;
+    /* transition: all 2s .3s ease-out; */
     transform: translate(15px,0);
     -webkit-transform: translate(15px,0); 
     -o-transform: translate(15px,0);
     -moz-transform: translate(15px,0); 
 }
-
+#about-img-mobile{
+    opacity: 0.6;
+    transition: all 2s .3s ease-out;
+}
 #about-text.is-visible p, #about-text.is-visible h2{
     opacity:1;
     transition: all 2s .3s ease-out;
@@ -271,7 +295,9 @@ header {
     -moz-transform: translate(0,0); 
     transition: all 1.5s .3s ease-out;
 }
-
+#about-img-mobile.is-visible{
+    opacity:1;
+}
 
 
 #about-img-mobile{
@@ -281,14 +307,9 @@ header {
     background-size: cover;
     display: none;
     width: 100%;
-    height:
-     500px;
-    opacity: 0.6;
-    transition: all 2s .3s ease-out;
+    height: 500px;
 }
-#about-img-mobile.is-visible{
-    opacity:1;
-}
+
 
 
 /* PROJECTS SECTION */
@@ -551,6 +572,7 @@ footer{
 
 /* MEDIA QUERY*/
 @media screen and (max-width: 320x) {
+
     #intro, #how-would-you, #about, #projects, #artist-website, #metaphor, #contact {
         width: 100%;
     }
@@ -580,7 +602,6 @@ footer{
     }
     .item_menu{
         display:none;
-        /* border-bottom: 1px solid rgba(255, 255, 255, 0.9); */
         background-color: rgba(241,216,222, .9);
         font-size: smaller;
         padding: 1em 0 1em 0;
@@ -595,23 +616,15 @@ footer{
     .burger{
         display: block;
     }
-    .close{
-        display:none;
-        text-align: right;
-        background-color: rgba(241,216,222, .9);
-        /* width: 100%;
-        height: 30px;
-        position: fixed;
-        top: 0; */
-    }
-    .close a {
-        padding-right: 10%;
-        color: rgba(141, 97, 108, 0.9);
-        font-family: Arial, Helvetica, sans-serif;
+
+    .mobile-menu-show{
+        /* display: none; */
+        margin-left: -100vh;
+        padding: 10% 10px 20% 10px;
     }
     .mobile-menu-back{
         position: fixed;
-        margin: 0px;
+        margin-left: -100vh;
         top: 0px;
         bottom: 0px;
         width: 100%;
@@ -626,29 +639,33 @@ footer{
         width: calc(100% - 60px );
     }
     .mobile-menu{
-    display: block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 3;
-    width: 100%;
-    padding: 36px;
-    overflow: auto;
-    -webkit-transition: -webkit-transform 350ms cubic-bezier(.55,0,.1,1);
-    transition: -webkit-transform 350ms cubic-bezier(.55,0,.1,1);
-    -webkit-transition: transform 350ms cubic-bezier(.55,0,.1,1);
-    -moz-transition: transform 350ms cubic-bezier(.55,0,.1,1);
-    -ms-transition: transform 350ms cubic-bezier(.55,0,.1,1);
-    -o-transition: transform 350ms cubic-bezier(.55,0,.1,1);
-    transition: transform 350ms cubic-bezier(.55,0,.1,1);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 3;
+        width: 100%;
+        padding: 36px;
+        overflow: auto;
     }
-    .mobile-menu a{
-        font-size: 22px;
+    .mobile-menu-links{
+        display:none;
+        font-size: 1.6em;
+        font-weight: bold;
+        color:  #90acaa;
         letter-spacing: .04em;
         line-height: 1.8em;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        width: 100%;
+        padding-bottom: .618em;
+        text-align: left;
+        z-index: 1003;
     }
 
 
@@ -762,7 +779,7 @@ footer{
     #footer-menu{
         width: 100%;
     }
-
+}
 @media screen and (max-width: 620px) {
     #intro #how-would-you #about #projects #video #artist-website #metaphor #contact {
         width: 100%;
@@ -801,42 +818,35 @@ footer{
     .burger{
         display: block;
     }
-    .close{
-        display:none;
-        text-align: right;
-        background-color: rgba(241,216,222, .9);
-    }
-    .close a {
-        padding-right: 10%;
-        color: rgba(141, 97, 108, 0.9);
-        font-family: Arial, Helvetica, sans-serif;
-    }
+    
     .mobile-menu-show{
-        display: block;
+        /* display: none; */
+        margin-left: -100vh;
+        padding: 10% 10px 20% 10px;
     }
     .mobile-menu-back{
         position: fixed;
-        margin: 0px;
+        margin-left: -100vh;
         top: 0px;
         bottom: 0px;
         width: 100%;
         z-index:1000;
-        background-color: rgba(241,216,222, .9);
+        background-color: rgba(241,216,222, 1);
     }
     .mobile-menu-container{
         position: absolute;
         top: 0;
         bottom: 0;
-        z-index: 2;
+        z-index: 1002;
         width: calc(100% - 60px );
         overflow:hidden;
     }
-    .mobile-menu{
-        display: block;
-        
-    }
-    .mobile-menu a{
-        font-size: 22px;
+    
+    .mobile-menu-links{
+        display:none;
+        font-size:1.6em;
+        font-weight: bold;
+        color:  #90acaa;
         letter-spacing: .04em;
         line-height: 1.8em;
         -webkit-box-sizing: border-box;
@@ -847,6 +857,8 @@ footer{
         width: 100%;
         padding-bottom: .618em;
         text-align: left;
+        z-index: 1003;
+
     }
 
 
