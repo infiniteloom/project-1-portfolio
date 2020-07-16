@@ -77,9 +77,9 @@ const showMenu =(event) =>{
                 $links.each(function(index){
                     $(this).css('display', 'none');
                 });
-                $mobileLinks.each(function(index){
-                    $(this).css('display', 'none');
-                });
+                // $mobileLinks.each(function(index){
+                //     $(this).css('display', 'none');
+                // });
              }
              show = false;
             
@@ -94,9 +94,9 @@ const showMenu =(event) =>{
             // $links.each(function(index){
             //     $(this).css('display', 'block');
             // });
-            $mobileLinks.each(function(index){
-                $(this).css('display', 'block');
-            });
+            // $mobileLinks.each(function(index){
+            //     $(this).css('display', 'block');
+            // });
             show = true;        
         }
     }else{

@@ -122,7 +122,12 @@ header {
 }
 .mobile-menu-show{
     margin-left: -100vh;
-    transition: all .5s .25s ease-in-out;
+    padding: 10% 10px 20% 10px;
+    -webkit-transition: margin-left .5s 350ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+    -moz-transition: margin-left .5s 350ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+    -ms-transition: margin-left .5s 350ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+    -o-transition: margin-left .5s 350ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+    transition: margin-left .5s 350ms,background-color 200ms cubic-bezier(.55,0,.1,1) 175ms;
 }
 
 /* INTRO SECTION WITH ANIMATION IFRAME */
@@ -616,12 +621,12 @@ footer{
     .burger{
         display: block;
     }
-
+/* 
     .mobile-menu-show{
-        /* display: none; */
+        display: none;
         margin-left: -100vh;
         padding: 10% 10px 20% 10px;
-    }
+    } */
     .mobile-menu-back{
         position: fixed;
         margin-left: -100vh;
@@ -818,12 +823,12 @@ footer{
     .burger{
         display: block;
     }
-    
+/*     
     .mobile-menu-show{
-        /* display: none; */
+        display: none;
         margin-left: -100vh;
         padding: 10% 10px 20% 10px;
-    }
+    } */
     .mobile-menu-back{
         position: fixed;
         margin-left: -100vh;
