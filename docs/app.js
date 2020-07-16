@@ -63,13 +63,12 @@ const showMenu =(event) =>{
         // console.log('this is smaller than 400')
         if(show){
             if($(this)=== $burger || $(this) === $links ){
-                
                 show = false;
              }else{
                 $('.close').css('display', 'none');
-                $burger.css('display', 'block');  
-                $('nav').removeClass('mobile-menu')
-                $('nav').addClass('inline-menu');
+                $burger.css('display', 'block');    
+                $('.inline-menu').css('display', 'block');
+                $('.mobile-menu-show').css('display', 'none');
                 $('.title-name').css('display','block');
                 $links.each(function(index){
                     $(this).css('display', 'none');
@@ -82,10 +81,9 @@ const showMenu =(event) =>{
             $links.each(function(index){
                 $(this).css('display', 'block');
                 $('.close').css('display', 'block');
-                $('nav').removeClass('inline-menu');
-                $('nav').addClass('mobile-menu');
+                $('.inline-menu').css('display', 'none');
+                $('.mobile-menu-show').css('display','block');
                 $('.title-name').css('display','none');
-                // $('nav').removeClass('inline-menu').css('position', 'fixed').css('margin', '0').css('top','50px').css('width','100%');
                 $burger.css('display', 'none')
             });
             show = true;        }
@@ -142,19 +140,34 @@ let elementsToShow = document.querySelectorAll('.show-on-scroll');
 
 const loop = () =>{
     elementsToShow.forEach(element =>{
-        if(element === $('header') || element === $('#about')){
-            console.log('the header is always visible')
-                element.classList.add('is-visible');
+        if(isElementInViewport(element)){
+            element.classList.add('is-visible');
         }else{
-            if(isElementInViewport(element)){
-                element.classList.add('is-visible');
-            }else{
-                element.classList.remove('is-visible');
-            }
+            element.classList.remove('is-visible');
         }
-
     });
     scroll(loop);
 }
+
+
+
+// my attempt at fixing the bug where the header on mobile would disappear when placed at fixed position top 0. 
+// const loop = () =>{
+//     elementsToShow.forEach(element =>{
+//         if(element === $('header') || element === $('#about')){
+//             console.log('the header is always visible')
+//                 element.classList.add('is-visible');
+//         }else{
+//             if(isElementInViewport(element)){
+//                 element.classList.add('is-visible');
+//             }else{
+//                 element.classList.remove('is-visible');
+//             }
+//         }
+
+//     });
+//     scroll(loop);
+// }
+
 
 loop();
