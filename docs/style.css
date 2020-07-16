@@ -123,6 +123,7 @@ header {
     margin-left: -90000px;
     /* visibility: hidden;    */
     opacity: 0;
+    transition: opacity 2s 2s ease-out;
     padding: 10% 10px 20% 10px;
     -webkit-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
     -moz-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
@@ -632,6 +633,7 @@ footer{
         margin-left: -90000px;
         /* visibility: hidden; */
         opacity: 0;
+        transition: opacity 2s 2s ease-out;
         padding: 10% 10px 20% 10px;
         -webkit-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
         -moz-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
@@ -849,6 +851,7 @@ footer{
         margin-left: -90000px;
         /* visibility: hidden; */
         opacity: 0;
+        transition: opacity 2s 2s ease-out;
         padding: 10% 10px 20% 10px;
         -webkit-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
         -moz-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;

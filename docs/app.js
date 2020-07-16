@@ -70,7 +70,7 @@ const showMenu =(event) =>{
                 $burger.css('display', 'block');    
                 $('.inline-menu').css('display', 'block');
                 $('.mobile-menu-show').css('opacity', '0');
-                $('.mobile-menu-show').css('margin-left','-100vh');
+                $('.mobile-menu-show').css('margin-left','-900000px');
                 $('.title-name').css('display','block');
 
                 $links.each(function(index){
