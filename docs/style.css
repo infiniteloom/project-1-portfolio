@@ -625,6 +625,7 @@ footer{
 
     .mobile-menu-back{
         position: fixed;
+        display:none;
         margin-left: -100vh;
         top: 0px;
         bottom: 0px;

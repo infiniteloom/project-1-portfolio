@@ -70,6 +70,7 @@ const showMenu =(event) =>{
                 $burger.css('display', 'block');    
                 $('.inline-menu').css('display', 'block');
                 $('.mobile-menu-show').css('display', 'none');
+                $('.mobile-menu-back').css('display','none');
                 $('.mobile-menu-back').css('margin-left','-100vh');
                 $('.mobile-menu-show').css('margin-left','-100vh');
                 $('.title-name').css('display','block');
@@ -87,6 +88,7 @@ const showMenu =(event) =>{
             $('.close').css('display', 'block');
             $('.inline-menu').css('display', 'none');
             $('.mobile-menu-show').css('display','block');
+            $('.mobile-menu-back').css('display','block');
             $('.mobile-menu-back').css('margin-left','0');
             $('.mobile-menu-show').css('margin-left','0');
             $('.title-name').css('display','none');
