@@ -66,7 +66,8 @@ const showMenu =(event) =>{
             if($(this)=== $burger || $(this) === $links ){
                 show = false;
              }else{
-                $('.close').css('opacity', '0');
+                $('.close').css('margin-left', '-900000px');
+                // $('.fa-times').css('opacity', '0');
                 $burger.css('display', 'block');    
                 $('.inline-menu').css('display', 'block');
                 // $('.mobile-menu-show').css('opacity', '0');
@@ -86,7 +87,8 @@ const showMenu =(event) =>{
              show = false;
             
         }else{
-            $('.close').css('opacity', '1');
+            $('.close').css('margin-left', '0px');
+            // $('.fa-times').css('opacity', '1');
             $('.inline-menu').css('display', 'none');
             // $('.mobile-menu-show').css('opacity', '1');
             // $('.mobile-menu-show').css('display','block');
