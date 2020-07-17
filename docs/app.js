@@ -70,7 +70,10 @@ const showMenu =(event) =>{
                 $burger.css('display', 'block');    
                 $('.inline-menu').css('display', 'block');
                 // $('.mobile-menu-show').css('opacity', '0');
+                // $('.mobile-menu-show').css('display','none');
                 $('.mobile-menu-show').css('margin-left','-900000px');
+                $('.mobile-menu-back').css('margin-left','-900000px');
+                $mobileLinks.css('display','none');
                 $('.title-name').css('display','block');
 
                 $links.each(function(index){
@@ -86,7 +89,10 @@ const showMenu =(event) =>{
             $('.close').css('display', 'block');
             $('.inline-menu').css('display', 'none');
             // $('.mobile-menu-show').css('opacity', '1');
+            // $('.mobile-menu-show').css('display','block');
             $('.mobile-menu-show').css('margin-left','0');
+            $('.mobile-menu-back').css('margin-left','0');
+            $mobileLinks.css('display','block');
             $('.title-name').css('display','none');
             $burger.css('display', 'none');
             // $links.each(function(index){
