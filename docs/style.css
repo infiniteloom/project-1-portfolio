@@ -237,8 +237,14 @@ header {
       0%{
         opacity: 1;
       }
+      25%{
+        opacity: .5
+      }
       50%{
-        opacity: .4;
+        opacity: .3;
+      }
+      75%{
+        opacity: .5
       }
       100%{
         opacity: 1;
@@ -255,12 +261,23 @@ header {
 }
 .quote.is-visible{
     animation-name: color;
-    animation-duration: 5s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
-    -webkit-animation: color 5s infinite; /* Safari 4+ */
-    -moz-animation:    color 5s infinite; /* Fx 5+ */
-    -o-animation:      color 5s infinite; /* Opera 12+ */
-    animation:         color 5s infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: color 6s infinite; /* Safari 4+ */
+    -moz-animation:    color 6s infinite; /* Fx 5+ */
+    -o-animation:      color 6s infinite; /* Opera 12+ */
+    animation:         color 6s infinite; /* IE 10+, Fx 29+ */
+}
+@keyframes color{
+    0%{
+    color: #b88a93;
+    }
+    50% {
+    color:#5d4c4e;
+    }
+    100%{
+    color:  #b88a93;
+    } 
 }
 .quote:hover{
     font-weight: bolder;
@@ -282,40 +299,29 @@ header {
     font-size: 1em;
     transition: all 2s .25s ease-out;
 }
-.mobile-quote.is-visible{
-    color: #809dac;
-    animation-name: color;
-    animation-duration: 5s;
+.mobile-quote.is-visible a{ 
+
+    animation-name: color2;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
-    -webkit-animation: color 5s infinite; /* Safari 4+ */
-    -moz-animation:    color 5s infinite; /* Fx 5+ */
-    -o-animation:      color 5s infinite; /* Opera 12+ */
-    animation:         color 5s infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: color2 6s infinite; /* Safari 4+ */
+    -moz-animation:    color2 6s infinite; /* Fx 5+ */
+    -o-animation:      color2 6s infinite; /* Opera 12+ */
+    animation:         color2 6s infinite; /* IE 10+, Fx 29+ */
 }
-/* @keyframes color{
-      0%{
-        color: #809dac;
-      }
-      50% {
-        color:#213131;
-      }
-      100%{
-       color:  #809dac;
-      }
-
-} */
-      @keyframes color{
-      0%{
-        color: #b88a93;
-      }
-      50% {
-        color:#5d4c4e;
-      }
-      100%{
-       color:  #b88a93;
-      } 
+@keyframes color2{
+    0%{
+    color:  #627f8d;
+    }
+    50% {
+    color:#445b66;
+    }
+    100%{
+    color:  #627f8d;
+    } 
 
 }
+
 
 
 
