@@ -101,17 +101,17 @@ header {
     color: gold;
 }
 .close{
-    margin-left: -90000px;
-    position: absolute;
+    position: fixed;
+    opacity: 0;
     top: 0;
-    right: 10%;
+    right: -90000px;
     z-index: 1005;
     padding: 22px;
     line-height: 0;
     width: 40px;
     height: 40px;
     background-color: transparent;
-
+    transition: right .2s ease-out, opacity 1.5 ease-out;
 }
 #closeX{
     width: 20px;
@@ -120,15 +120,67 @@ header {
     font-size: 1.5em;
     transition: all 1.5s;
 }
-.mobile-menu-show{
-    margin-left: -90000px;
-    transition: margin-left 0s, cubic-bezier(.62,.02,.1,1) .5s;
+.mobile-menu-back.mobile-menu-show{
+    margin-left: 0;
+    opacity: 1;
+    transition: margin-left 1s ease-out, opacity 1s;
+}
+.mobile-menu-back.mobile-menu-hide{
+    opacity: 0;
+    margin-left: -900000px;
+    transition: margin-left 1s ease-out, opacity 1s;
+}
+.mobile-menu-back{
+    position: fixed;
+    background-color: rgba(241,216,222, 1);
+    opacity: 0;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index:1000;
 }
 
-
+.mobile-menu-container{
+    position: absolute;
+    background-color: rgba(241,216,222, 1);
+    opacity: 1;
+    padding: 20% 10px 20% 10%;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 60%;
+}
+.mobile-menu{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    padding: 36px;
+    overflow: auto;
+}
+.mobile-menu-links{
+    display:block;
+    font-size: 1.6em;
+    font-weight: bold;
+    color:  #90acaa;
+    letter-spacing: .04em;
+    line-height: 1.8em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-bottom: .618em;
+    text-align: left;
+    z-index: 1003;
+}
 /* INTRO SECTION WITH ANIMATION IFRAME */
 #intro{
-    background-image: url('assets/Lea_Portrait_Loam_2019_B_300dpi web.jpg');
+    background-image: url('https://res.cloudinary.com/infiniteloom/image/upload/v1594992554/Unit%2001-%20Project/Images/Lea_Portrait_Loam_2019_B_300dpi_web_copy_r2gemv.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -574,389 +626,282 @@ footer{
 /* MEDIA QUERY*/
 @media screen and (max-width: 320x) {
 
-    #intro, #how-would-you, #about, #projects, #artist-website, #metaphor, #contact {
-        width: 100%;
-    }
+#intro, #how-would-you, #about, #projects, #artist-website, #metaphor, #contact {
+    width: 100%;
+}
 
-    #intro{
-        height: 100vh;
-    }
-
-
-
-  
-    header{
-        width: 100%;
-        height: 100%;
-    }
-    #header-wrapper{
-        justify-content: space-around;
-        align-items: center;
-        padding-top: 1em;
-        padding: 0;
-        margin: 0;
-        height: 100%;
-    }
-    .title-name a{
-        padding: 0;
-        width: 50%;
-    }
-    .item_menu{
-        display:none;
-        background-color: rgba(241,216,222, .9);
-        font-size: smaller;
-        padding: 1em 0 1em 0;
-    }
-    .last-item-menu{
-        padding-bottom: 30px;
-    }
-    .inline-menu{
-        display:block;
-        width: 100%;
-    }
-    .burger{
-        display: block;
-    }
-    .mobile-menu-show{
-        margin-left: -90000px;
-        transition: margin-left 0s;
-        transition: margin-left 0s, cubic-bezier(.62,.02,.1,1) .5s;
-        }
-    .mobile-menu-back{
-        position: fixed;
-        top: 0px;
-        bottom: 0px;
-        width: 100%;
-        z-index:1000;
-        margin-left: -90000px;
-        transition: margin-left 0s, cubic-bezier(.62,.02,.1,1) .5s;
-        }
-    .mobile-menu-container{
-        position: absolute;
-        background-color: rgba(241,216,222, 1);
-        padding: 20% 10px 20% 10%;
-        top: 0;
-        bottom: 0;
-        z-index: 2;
-        width: 60%;
-    }
-    .mobile-menu{
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        z-index: 3;
-        width: 100%;
-        padding: 36px;
-        overflow: auto;
-        transition: all 2s 0.2s ease-out;
-        }
-    .mobile-menu-links{
-        display:none;
-        font-size: 1.6em;
-        font-weight: bold;
-        color:  #90acaa;
-        letter-spacing: .04em;
-        line-height: 1.8em;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        position: relative;
-        width: 100%;
-        padding-bottom: .618em;
-        text-align: left;
-        z-index: 1003;
-    }
+#intro{
+    height: 100vh;
+}
 
 
+
+
+header{
+    width: 100%;
+    height: 100%;
+}
+#header-wrapper{
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1em;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.title-name a{
+    padding: 0;
+    width: 50%;
+}
+.item_menu{
+    display:none;
+    background-color: rgba(241,216,222, .9);
+    font-size: smaller;
+    padding: 1em 0 1em 0;
+}
+.last-item-menu{
+    padding-bottom: 30px;
+}
+.inline-menu{
+    display:block;
+    width: 100%;
+}
+.burger{
+    display: block;
+}
+
+
+
+
+
+
+
+
+#how-would-you{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#how-would-you-web{
+    display: none;
+}
+#how-would-you-mobile{
+    display: block;
+    height: 100%;
+}
+
+
+
+
+
+
+#about{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: #dbe6e5;
+}
+#about-text{
+    width: 90%;
+    padding: 5%;
+    height: 100%;
+    position: relative;
+    transition: all .25s .25s ease-out;
+}
+#about-img-web{
+    display: none;
+}
+#about-img-mobile{
+    display: block;
+}
+
+
+
+
+#projects{
+    padding:100px 0 100px 0;
+}
+#projects-code div{
+    width: 100%;
+    height: 250px;
+} 
+
+
+
+
+#artist-website {
+    width: 100%;
+    height: 80%;
+    margin: 0;
+}
+#artist-website p,   #artist-website a span{
+    width: 100%;
+    margin: 0;
+} 
+
+
+#metaphor p{
+    padding: 0 20px 0 20px;
+    height: 70%;
+    font-size: .9em;
+}
+
+
+
+
+#contact{
+    padding-left: 10px;
+}
+.form-input{
+    width: 300px;
+}
+.form-input-message{
+    width: 300px;
+}
+.form button{
+    height: 2em;
+    padding-left: 170px;
+}
+.form button p{
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+
+
+footer{
+    width: 100%;
     
-
-
-
-    #how-would-you{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    #how-would-you-web{
-        display: none;
-    }
-    #how-would-you-mobile{
-        display: block;
-        height: 100%;
-    }
-
-
-
-
-
-
-    #about{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: 100%;
-        width: 100%;
-        background-color: #dbe6e5;
-    }
-    #about-text{
-        width: 90%;
-        padding: 5%;
-        height: 100%;
-        position: relative;
-        transition: all .25s .25s ease-out;
-    }
-    #about-img-web{
-        display: none;
-    }
-    #about-img-mobile{
-        display: block;
-    }
-
-
-
-
-    #projects{
-        padding:100px 0 100px 0;
-    }
-    #projects-code div{
-        width: 100%;
-        height: 250px;
-    } 
-
-
-
-
-    #artist-website {
-        width: 100%;
-        height: 80%;
-        margin: 0;
-    }
-    #artist-website p,   #artist-website a span{
-        width: 100%;
-        margin: 0;
-    } 
-
-
-    #metaphor p{
-        padding: 0 20px 0 20px;
-        height: 70%;
-        font-size: .9em;
-    }
-
-
-
-
-    #contact{
-        padding-left: 10px;
-    }
-    .form-input{
-        width: 300px;
-    }
-    .form-input-message{
-        width: 300px;
-    }
-    .form button{
-        height: 2em;
-        padding-left: 170px;
-    }
-    .form button p{
-        font-family: 'EB Garamond', serif;
-        font-weight: bold;
-        font-size: 2em;
-    }
-
-
-
-    footer{
-        width: 100%;
-      
-    }
-    #footer-menu{
-        width: 100%;
-    }
+}
+#footer-menu{
+    width: 100%;
+}
 }
 @media screen and (max-width: 620px) {
-    #intro #how-would-you #about #projects #video #artist-website #metaphor #contact {
-        width: 100%;
-    }
+#intro #how-would-you #about #projects #video #artist-website #metaphor #contact {
+    width: 100%;
+}
 
-    #intro{
-        height: 100vh;
-    }
-
-
-
-    header{
-        width: 100%;
-    }
-    #header-wrapper{
-        justify-content: space-around;
-        align-items: center;
-        padding: 1em 0 0 0;
-        margin: 0;
-    }
-    .title-name a{
-        padding: 0px;
-        width: 50%;
-    }
-    .item_menu{
-        display:none;
-        background-color: rgba(241,216,222, .9);
-        font-size: smaller;
-        padding: 1em 0 1em 0;
-    }
-    .last-item-menu{
-        padding-bottom: 30px;
-    }
-    .burger{
-        display: block;
-    }    
-    .mobile-menu-show{
-        margin-left: -90000px;
-        transition: margin-left 0s, cubic-bezier(.62,.02,.1,1) .5s;
-    }
-    .mobile-menu-back{
-        position: fixed;
-        background-color: rgba(241,216,222, 1);
-        margin-left: -900000px;
-        transition: margin-left 0s, cubic-bezier(.62,.02,.1,1) .5s;
-        top: 0px;
-        bottom: 0px;
-        width: 100%;
-        z-index:1000;
-    }
-
-    .mobile-menu-container{
-        position: absolute;
-        background-color: rgba(241,216,222, 1);
-        padding: 20% 10px 20% 10%;
-        top: 0;
-        bottom: 0;
-        z-index: 1002;
-        width: 60%;
-        overflow:hidden;
-    }
-    .mobile-menu{
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        z-index: 1003;
-        width: 100%;
-        padding: 36px;
-        overflow: auto;    
-    }
-    
-    .mobile-menu-links{
-        display:none;
-        font-size:1.6em;
-        font-weight: bold;
-        color:  #90acaa;
-        letter-spacing: .04em;
-        line-height: 1.8em;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        position: relative;
-        width: 100%;
-        padding-bottom: .618em;
-        text-align: left;
-        z-index: 1003;
-
-    }
+#intro{
+    height: 100vh;
+}
 
 
 
+header{
+    width: 100%;
+}
+#header-wrapper{
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0 0 0;
+    margin: 0;
+}
+.title-name a{
+    padding: 0px;
+    width: 50%;
+}
+.item_menu{
+    display:none;
+    background-color: rgba(241,216,222, .9);
+    font-size: smaller;
+    padding: 1em 0 1em 0;
+}
+.last-item-menu{
+    padding-bottom: 30px;
+}
+.burger{
+    display: block;
+}    
 
-    #how-would-you{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    #how-would-you-web{
-        display: none;
-    }
-    #how-would-you-mobile{
-        display: block;
-    }
+
+#how-would-you{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#how-would-you-web{
+    display: none;
+}
+#how-would-you-mobile{
+    display: block;
+}
 
 
 
 
 
-   #about{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        height: 50%;
-        background-color: #dbe6e5;
-    }
-    #about-text{
-        width: 90%;
-        padding: 5%;
-        display: block;
-        position: relative;
-    }
-    #about-text.is-visible p{ 
-        transition: opacity .2s .25s ease-out;
-    }
-    #about-img-web{
-        display: none;
+#about{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    background-color: #dbe6e5;
+}
+#about-text{
+    width: 90%;
+    padding: 5%;
+    display: block;
+    position: relative;
+}
+#about-text.is-visible p{ 
+    transition: opacity .2s .25s ease-out;
+}
+#about-img-web{
+    display: none;
 
-    }
-    #about-img-mobile{
-        display: block;
-    } 
-
-
-
-
-
-    #projects{
-        padding:100px 0 100px 0;
-    }
-    #projects-code div{
-        width: 100%;
-        height: 250px;
-    }
+}
+#about-img-mobile{
+    display: block;
+} 
 
 
 
 
 
-    #video{
-        width: 100%;
-    }
+#projects{
+    padding:100px 0 100px 0;
+}
+#projects-code div{
+    width: 100%;
+    height: 250px;
+}
 
 
 
-    
 
-    #artist-website {
-        width: 100%;
-        height: 80%;
-        margin: 0;
-    }
 
-    #artist-website p,   #artist-website p a span{
-        width: 100%;
-        margin: 0;
-    } 
+#video{
+    width: 100%;
+}
+
+
+
+
+
+#artist-website {
+    width: 100%;
+    height: 80%;
+    margin: 0;
+}
+
+#artist-website p,   #artist-website p a span{
+    width: 100%;
+    margin: 0;
+} 
 
 
 

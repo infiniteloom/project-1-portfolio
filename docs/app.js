@@ -66,43 +66,34 @@ const showMenu =(event) =>{
             if($(this)=== $burger || $(this) === $links ){
                 show = false;
              }else{
-                $('.close').css('margin-left', '-900000px');
-                // $('.fa-times').css('opacity', '0');
+                $('.close').css('right', '-900000px').css('position', 'fixed');
                 $burger.css('display', 'block');    
                 $('.inline-menu').css('display', 'block');
                 // $('.mobile-menu-show').css('opacity', '0');
                 // $('.mobile-menu-show').css('display','none');
-                $('.mobile-menu-show').css('margin-left','-900000px');
-                $('.mobile-menu-back').css('margin-left','-900000px');
-                $mobileLinks.css('display','none');
+                // $('.mobile-menu-show').css('margin-left','-900000px');
+                $('.mobile-menu-back').removeClass('mobile-menu-show');
+                $('.mobile-menu-back').addClass('mobile-menu-hide');
+                // $mobileLinks.css('display','none');
                 $('.title-name').css('display','block');
 
                 $links.each(function(index){
                     $(this).css('display', 'none');
                 });
-                // $mobileLinks.each(function(index){
-                //     $(this).css('display', 'none');
-                // });
              }
              show = false;
             
         }else{
-            $('.close').css('margin-left', '0px');
-            // $('.fa-times').css('opacity', '1');
+            $('.close').css('position', 'absolute').css('right', '10%').css('opacity', '1');
             $('.inline-menu').css('display', 'none');
             // $('.mobile-menu-show').css('opacity', '1');
             // $('.mobile-menu-show').css('display','block');
-            $('.mobile-menu-show').css('margin-left','0');
-            $('.mobile-menu-back').css('margin-left','0');
-            $mobileLinks.css('display','block');
+            // $('.mobile-menu-show').css('margin-left','0');
+            $('.mobile-menu-back').removeClass('mobile-menu-hide');
+            $('.mobile-menu-back').addClass('mobile-menu-show');
+            // $mobileLinks.css('display','block');
             $('.title-name').css('display','none');
             $burger.css('display', 'none');
-            // $links.each(function(index){
-            //     $(this).css('display', 'block');
-            // });
-            // $mobileLinks.each(function(index){
-            //     $(this).css('display', 'block');
-            // });
             show = true;        
         }
     }else{
