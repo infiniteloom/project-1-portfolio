@@ -66,19 +66,10 @@ const showMenu =(event) =>{
             if($(this)=== $burger || $(this) === $links ){
                 show = false;
              }else{
-            // $('.close').css('right', '-900000px').css('position', 'fixed');
             $burger.css('display', 'block');    
             $('.inline-menu').css('display', 'block');
-            // $('.mobile-menu-show').css('opacity', '0');
-            // $('.mobile-menu-show').css('display','none');
             $('.mobile-menu-back').css('margin-left','-900000px');
-            // $('.mobile-menu-back').removeClass('mobile-menu-show');
-            // $('.mobile-menu-back').addClass('mobile-menu-hide');
-            // $('.mobile-menu-container').removeClass('mobile-menu-show');
-            // $('.mobile-menu-container').addClass('mobile-menu-hide');
-            // $mobileLinks.css('display','none');
             $('.title-name').css('display','block');
-
             $links.each(function(index){
                 $(this).css('display', 'none');
             });
@@ -86,16 +77,8 @@ const showMenu =(event) =>{
          show = false;
         
     }else{
-        // $('.close').css('position', 'absolute').css('right', '10%').css('opacity', '1');
         $('.inline-menu').css('display', 'none');
-        // $('.mobile-menu-show').css('opacity', '1');
-        // $('.mobile-menu-show').css('display','block');
         $('.mobile-menu-back').css('margin-left','0');
-        // $('.mobile-menu-back').removeClass('mobile-menu-hide');
-        // $('.mobile-menu-back').addClass('mobile-menu-show');
-        // $('.mobile-menu-container').removeClass('mobile-menu-hide');
-        // $('.mobile-menu-container').addClass('mobile-menu-show');
-        // $mobileLinks.css('display','block');
         $('.title-name').css('display','none');
         $burger.css('display', 'none');
         show = true;       
@@ -123,16 +106,7 @@ function isElementInViewport(el) {
       el = el[0];
     }
     var rect = el.getBoundingClientRect();
-    // return (
-    //   (rect.top <= 0
-    //     && rect.bottom >= 0)
-    //   ||
-    //   (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-    //     rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-    //   ||
-    //   (rect.top >= 0 &&
-    //     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-    // );
+
     return (
         (rect.top <= 0
           && rect.bottom >= 0)

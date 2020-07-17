@@ -32,8 +32,13 @@ a{
 }
 a:hover{
     color: grey;
-    transition: all 300ms;
+    transition:
+     all 300ms;
 }
+
+
+
+/* WEB MENU STYLINGS */
 header {
     width: 100%;
     min-width: 320px;
@@ -59,10 +64,7 @@ header {
 }
 #header-wrapper.is-visible {
     opacity: 1;
-
-    }
-
-  
+}  
 .title-name a{
     font-size:20px;
     padding-left: 20px;
@@ -91,6 +93,9 @@ header {
     transition: all 300ms;
 }
 
+
+
+/* MOBILE MENU STYLINGS */
 .burger{
     display:none;
     color: 	#397e7a;
@@ -100,8 +105,6 @@ header {
 .burger:hover{
     color: gold;
 }
-
-
 .close{
     position: absolute;
     top: 0;
@@ -119,6 +122,7 @@ header {
     font-size: 1.5em;
 }
 
+/* STYLE RULES FOR SLIDE-IN MOBILE MENU */
 .mobile-menu-back{
     position: fixed;
     margin-left: -9000px;
@@ -142,7 +146,6 @@ header {
     z-index: 2;
     width: 60%;
 }
-
 .mobile-menu{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -171,7 +174,13 @@ header {
     text-align: left;
     z-index: 1003;
 }
-/* INTRO SECTION WITH ANIMATION IFRAME */
+
+
+
+
+
+
+/* INTRO SECTION WITH OPACITY ANIMATION */
 #intro{
     background-image: url('https://res.cloudinary.com/infiniteloom/image/upload/v1594992554/Unit%2001-%20Project/Images/Lea_Portrait_Loam_2019_B_300dpi_web_copy_r2gemv.jpg');
     background-position: center;
@@ -189,7 +198,7 @@ header {
   }
 
 
-/* Text block "how would you describe your next great idea?" */
+/* TEXT BLOCK SECTION "how would you describe your next great idea?" */
 #how-would-you{
     background-color: #d9ebf4;
     height: 90vh;
@@ -254,16 +263,11 @@ header {
 
 
 
-/* ABOUT SECTION */
+/* ABOUT SECTION W TEXT SLIDE-RIGHT ANIMATIONS AND IMG SLIDE-LEFT ANIMATION*/
 #about{
     line-height: 1.3em;
     height: 100vh;
-    /* text-align: left;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
     position: relative;
-
 }
 #about-text{
     text-align: left;
@@ -283,7 +287,6 @@ header {
     -o-transform: translate(-30px,0);
     -moz-transform: translate(-30px,0); 
 }
-
 #about-tagline{
     color: #e7acb7;
     transform: translate(-30px,0);
@@ -359,7 +362,6 @@ header {
 
 /* PROJECTS SECTION */
 #projects{
-
     background-color: #ffffff;
     padding: 100px 50px 100px 50px;
 }
@@ -413,6 +415,12 @@ header {
     transition: all 400ms;
 }
 
+
+
+
+
+
+
 /* VIDEO */
 #video{
     margin:0;
@@ -424,6 +432,13 @@ header {
     margin: 0;
     padding: 0;
 }
+
+
+
+
+
+
+
 
 /* ARTIST WEBSITE */
 #artist-website{
@@ -463,6 +478,12 @@ header {
 
 
 
+
+
+
+
+
+
 /* METAPHOR */
 #metaphor{
     background-image: url(assets/leawovenhemp.JPG);
@@ -482,6 +503,16 @@ header {
 #metaphor.is-visible{
     filter: brightness(100%);
 }
+
+
+
+
+
+
+
+
+
+
 
 /* CONTACT SECTION */
 #contact{
@@ -533,7 +564,7 @@ header {
 }
 #submit button{
     width: 100px;
-    border: 1px solid #f5e3e2;
+    border: 1px solid #cfaeac;
     border-radius: 5px;
     background-color: rgba(243, 229, 229, 0.7);  
     font-family: 'EB Garamond', serif;
@@ -546,6 +577,14 @@ header {
     background-color: rgba(218, 214, 214, 0.8);  
     transition: all 400ms;
 }
+
+
+
+
+
+
+
+
 
 
 /* FOOTER */
@@ -617,11 +656,6 @@ footer{
 
 /* MEDIA QUERY*/
 @media screen and (max-width: 320x) {
-
-    /* #intro, #how-would-you-mobile, #about, #projects, #artist-website, #metaphor, #contact {
-        width: 100%;
-    } */
-
     #intro{
         height: 100vh;
     }
@@ -754,7 +788,6 @@ footer{
     }
     .form button{
         height: 2em;
-        padding-left: 170px;
     }
     .form button p{
         font-family: 'EB Garamond', serif;
@@ -935,7 +968,6 @@ footer{
     }
     .form button{
         height: 2em;
-        padding-left: 170px;
     }
     .form button p{
         font-family: 'EB Garamond', serif;
