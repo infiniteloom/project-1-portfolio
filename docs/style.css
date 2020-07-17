@@ -100,45 +100,34 @@ header {
 .burger:hover{
     color: gold;
 }
+
+
 .close{
-    position: fixed;
-    opacity: 0;
+    position: absolute;
     top: 0;
-    right: -90000px;
+    right: 10%;
     z-index: 1005;
     padding: 22px;
     line-height: 0;
     width: 40px;
     height: 40px;
-    background-color: transparent;
-    transition: right .2s ease-out, opacity 1.5 ease-out;
 }
 #closeX{
     width: 20px;
     height: 20px;
     color: rgba(141, 97, 108, 0.9);
     font-size: 1.5em;
-    transition: all 1.5s;
 }
-.mobile-menu-back.mobile-menu-show{
-    margin-left: 0;
-    background-color: rgba(241,216,222, 1);
-    /* opacity: 1; */
-    transition: margin-left 1.5s ease-out, background-color 2s;
-    transition-property: margin-left;
-    transition-delay: 0s;
-}
-.mobile-menu-back.mobile-menu-hide{
-    /* opacity: 0; */
-    background-color: rgba(241,216,222, 1);
-    margin-left: -900000px;
-    transition: margin-left 1.5s ease-out, background-color 2s;
-    transition-property: margin-left;
-    transition-delay: 0s;
-}
+
 .mobile-menu-back{
     position: fixed;
-    /* opacity: 1; */
+    margin-left: -9000px;
+    background-color: rgba(241,216,222, 1);
+    transition: margin-left 1s,background-color 200ms cubic-bezier(.55,0,.1,1);
+    transition-property: margin-left, background-color;
+    transition-duration: 1s, 200ms;
+    transition-timing-function: ease-out, cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: 0s, 0s;
     top: 0px;
     bottom: 0px;
     width: 100%;
@@ -153,18 +142,7 @@ header {
     z-index: 2;
     width: 60%;
 }
-.mobile-menu-container.mobile-menu-show{
-    margin-left: 0x;
-    transition: margin-left .5s ease-in-out;
-    transition-property: margin-left;
-    transition-delay: 0s;
-}
-.mobile-menu-container.mobile-menu-hide{
-    margin-left: -900000px;
-    transition: margin-left .5s ease-in-out;
-    transition-property: margin-left;
-    transition-delay: 0s;
-}
+
 .mobile-menu{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -225,12 +203,15 @@ header {
 
 #how-would-you p{
     width: 100%;
-
     color: #9cb7c5;
-    transition: opacity 2s .25s ease-out;
+    transition: opacity 1s .25s ease-out;
     opacity: 0;
     will-change: opacity;
 }
+  
+#how-would-you .is-visible p{
+    opacity: 1;
+  }
 #how-would-you-web{
     width: 90%;
     max-width: 960px;
@@ -238,7 +219,6 @@ header {
 #how-would-you-mobile{
     display:none;
     max-width: 320px;
-    height: 100%;
 }
 #how-would-you-mobile p{
     max-width: 300px;
@@ -261,10 +241,7 @@ header {
     color: #397e7a;
     transition: all .25s .25s ease-out;
 }
-  
-#how-would-you .is-visible p{
-    opacity: 1;
-  }
+
 .quote.is-visible{
     font-style: normal;
 }
@@ -641,9 +618,9 @@ footer{
 /* MEDIA QUERY*/
 @media screen and (max-width: 320x) {
 
-    #intro, #how-would-you, #about, #projects, #artist-website, #metaphor, #contact {
+    /* #intro, #how-would-you-mobile, #about, #projects, #artist-website, #metaphor, #contact {
         width: 100%;
-    }
+    } */
 
     #intro{
         height: 100vh;
@@ -707,10 +684,6 @@ footer{
         display: block;
         height: 100%;
     }
-
-
-
-
 
 
     #about{
@@ -804,9 +777,9 @@ footer{
 
 
 @media screen and (max-width: 620px) {
-    #intro #how-would-you #about #projects #video #artist-website #metaphor #contact {
+    /* #intro #how-would-you #about #projects #video #artist-website #metaphor #contact {
         width: 100%;
-    }
+    } */
 
     #intro{
         height: 100vh;
@@ -826,6 +799,7 @@ footer{
     .title-name a{
         padding: 0px;
         width: 50%;
+        transform: none;
     }
     .item_menu{
         display:none;
@@ -833,8 +807,8 @@ footer{
         font-size: smaller;
         padding: 1em 0 1em 0;
     }
-    .last-item-menu{
-        padding-bottom: 30px;
+    .item_menu:hover{
+        transform: none;
     }
     .burger{
         display: block;

@@ -66,39 +66,39 @@ const showMenu =(event) =>{
             if($(this)=== $burger || $(this) === $links ){
                 show = false;
              }else{
-                $('.close').css('right', '-900000px').css('position', 'fixed');
-                $burger.css('display', 'block');    
-                $('.inline-menu').css('display', 'block');
-                // $('.mobile-menu-show').css('opacity', '0');
-                // $('.mobile-menu-show').css('display','none');
-                // $('.mobile-menu-show').css('margin-left','-900000px');
-                $('.mobile-menu-back').removeClass('mobile-menu-show');
-                $('.mobile-menu-back').addClass('mobile-menu-hide');
-                $('.mobile-menu-container').removeClass('mobile-menu-show');
-                $('.mobile-menu-container').addClass('mobile-menu-hide');
-                // $mobileLinks.css('display','none');
-                $('.title-name').css('display','block');
+            // $('.close').css('right', '-900000px').css('position', 'fixed');
+            $burger.css('display', 'block');    
+            $('.inline-menu').css('display', 'block');
+            // $('.mobile-menu-show').css('opacity', '0');
+            // $('.mobile-menu-show').css('display','none');
+            $('.mobile-menu-back').css('margin-left','-900000px');
+            // $('.mobile-menu-back').removeClass('mobile-menu-show');
+            // $('.mobile-menu-back').addClass('mobile-menu-hide');
+            // $('.mobile-menu-container').removeClass('mobile-menu-show');
+            // $('.mobile-menu-container').addClass('mobile-menu-hide');
+            // $mobileLinks.css('display','none');
+            $('.title-name').css('display','block');
 
-                $links.each(function(index){
-                    $(this).css('display', 'none');
-                });
-             }
-             show = false;
-            
-        }else{
-            $('.close').css('position', 'absolute').css('right', '10%').css('opacity', '1');
-            $('.inline-menu').css('display', 'none');
-            // $('.mobile-menu-show').css('opacity', '1');
-            // $('.mobile-menu-show').css('display','block');
-            // $('.mobile-menu-show').css('margin-left','0');
-            $('.mobile-menu-back').removeClass('mobile-menu-hide');
-            $('.mobile-menu-back').addClass('mobile-menu-show');
-            $('.mobile-menu-container').removeClass('mobile-menu-hide');
-            $('.mobile-menu-container').addClass('mobile-menu-show');
-            // $mobileLinks.css('display','block');
-            $('.title-name').css('display','none');
-            $burger.css('display', 'none');
-            show = true;        
+            $links.each(function(index){
+                $(this).css('display', 'none');
+            });
+         }
+         show = false;
+        
+    }else{
+        // $('.close').css('position', 'absolute').css('right', '10%').css('opacity', '1');
+        $('.inline-menu').css('display', 'none');
+        // $('.mobile-menu-show').css('opacity', '1');
+        // $('.mobile-menu-show').css('display','block');
+        $('.mobile-menu-back').css('margin-left','0');
+        // $('.mobile-menu-back').removeClass('mobile-menu-hide');
+        // $('.mobile-menu-back').addClass('mobile-menu-show');
+        // $('.mobile-menu-container').removeClass('mobile-menu-hide');
+        // $('.mobile-menu-container').addClass('mobile-menu-show');
+        // $mobileLinks.css('display','block');
+        $('.title-name').css('display','none');
+        $burger.css('display', 'none');
+        show = true;       
         }
     }else{
         return
@@ -134,14 +134,14 @@ function isElementInViewport(el) {
     //     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
     // );
     return (
-        (rect.top <= 30
-          && rect.bottom >= 30)
+        (rect.top <= 0
+          && rect.bottom >= 0)
         ||
-        (rect.bottom >= (window.innerHeight -30 || document.documentElement.clientHeight -30) &&
-          rect.top <= (window.innerHeight -30 || document.documentElement.clientHeight -30))
+        (rect.bottom >= (window.innerHeight  || document.documentElement.clientHeight ) &&
+          rect.top <= (window.innerHeight  || document.documentElement.clientHeight ))
         ||
-        (rect.top >= 30 &&
-          rect.bottom <= (window.innerHeight -30 || document.documentElement.clientHeight -30))
+        (rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight  || document.documentElement.clientHeight ))
       );
   }
 
@@ -162,25 +162,6 @@ const loop = () =>{
     scroll(loop);
 }
 
-
-
-// my attempt at fixing the bug where the header on mobile would disappear when placed at fixed position top 0. 
-// const loop = () =>{
-//     elementsToShow.forEach(element =>{
-//         if(element === $('header') || element === $('#about')){
-//             console.log('the header is always visible')
-//                 element.classList.add('is-visible');
-//         }else{
-//             if(isElementInViewport(element)){
-//                 element.classList.add('is-visible');
-//             }else{
-//                 element.classList.remove('is-visible');
-//             }
-//         }
-
-//     });
-//     scroll(loop);
-// }
 
 
 loop();
