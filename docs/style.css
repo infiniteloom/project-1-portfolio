@@ -121,15 +121,23 @@ header {
 }
 .mobile-menu-show{
     margin-left: -90000px;
+    display:block;
+    background-color: rgba(241,216,222, 1);
     /* visibility: hidden;    */
-    opacity: 0;
-    transition: opacity 2s 2s ease-out;
+    /* opacity: 0;
+    transition: opacity .25s; */
     padding: 10% 10px 20% 10px;
-    -webkit-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
-    -moz-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
-    -ms-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
-    -o-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
-    transition: margin-left .5s 350ms, opacity 2s, background-color 200ms cubic-bezier(.55,0,.1,1) 175ms;
+    /* -webkit-transition: margin-left .25s ease-out 350ms, cubic-bezier(.55,0,.1,1) 250ms;
+    -moz-transition: margin-left .25s  ease-out 350ms, cubic-bezier(.55,0,.1,1) 250ms;
+    -ms-transition: margin-left .25s ease-out  350ms, cubic-bezier(.55,0,.1,1) 250ms;
+    -o-transition: margin-left .25s ease-out  350ms, cubic-bezier(.55,0,.1,1) 250ms;
+    transition: margin-left .25s ease-out  350ms, cubic-bezier(.55,0,.1,1) 250ms; */
+    -webkit-transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+    -moz-transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+    -ms-transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+    -o-transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+    transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+
 }
 
 
@@ -631,15 +639,17 @@ footer{
     }
     .mobile-menu-show{
         margin-left: -90000px;
+        display:block;
+        background-color: rgba(241,216,222, 1);
         /* visibility: hidden; */
-        opacity: 0;
-        transition: opacity 2s 2s ease-out;
+        /* opacity: 0;
+        transition: opacity .25s; */
         padding: 10% 10px 20% 10px;
-        -webkit-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
-        -moz-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
-        -ms-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
-        -o-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
-        transition: margin-left .5s 350ms, opacity 2s, background-color 200ms cubic-bezier(.55,0,.1,1) 175ms;
+        -webkit-transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+        -moz-transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+        -ms-transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+        -o-transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+        transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
     }
     .mobile-menu-back{
         position: fixed;
@@ -647,19 +657,8 @@ footer{
         bottom: 0px;
         width: 100%;
         z-index:1000;
-        background-color: rgba(241,216,222, .9);
+        background-color: rgba(241,216,222, 1);
     }
-/* 
-    .mobile-menu-back{
-        position: fixed;
-        display:none;
-        margin-left: -100vh;
-        top: 0px;
-        bottom: 0px;
-        width: 100%;
-        z-index:1000;
-        background-color: rgba(241,216,222, .9);
-    } */
     .mobile-menu-container{
         position: absolute;
         top: 0;
@@ -849,15 +848,17 @@ footer{
     }    
     .mobile-menu-show{
         margin-left: -90000px;
+        display: block;
+        background-color: rgba(241,216,222, 1);
         /* visibility: hidden; */
-        opacity: 0;
-        transition: opacity 2s 2s ease-out;
+        /* opacity: 0;
+        transition: opacity .25s .25s ease-out; */
         padding: 10% 10px 20% 10px;
-        -webkit-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
-        -moz-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
-        -ms-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
-        -o-transition: margin-left .5s 350ms,opacity 2s, background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
-        transition: margin-left .5s 350ms, opacity 2s, background-color 200ms cubic-bezier(.55,0,.1,1) 175ms;
+        -webkit-transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+        -moz-transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+        -ms-transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+        -o-transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
+        transition: margin-left 0s 525ms,background-color 350ms cubic-bezier(.55,0,.1,1) 175ms;
     }
     .mobile-menu-back{
         position: fixed;
@@ -865,18 +866,9 @@ footer{
         bottom: 0px;
         width: 100%;
         z-index:1000;
-        background-color: rgba(241,216,222, .9);
+        /* background-color: rgba(241,216,222, 1); */
     }
-    /* .mobile-menu-back{
-        position: fixed;
-        display:none;
-        margin-left: -100vh;
-        top: 0px;
-        bottom: 0px;
-        width: 100%;
-        z-index:1000;
-        background-color: rgba(241,216,222, 1);
-    } */
+
     .mobile-menu-container{
         position: absolute;
         top: 0;
