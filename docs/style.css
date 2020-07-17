@@ -221,11 +221,52 @@ header {
   
 #how-would-you .is-visible p{
     opacity: 1;
-  }
+}
+
+.how-would-you-text-animation{
+    animation-name: opacity;
+    color: #9cb7c5;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation: opacity 5s infinite; /* Safari 4+ */
+    -moz-animation:    opacity 5s infinite; /* Fx 5+ */
+    -o-animation:      opacity 5s infinite; /* Opera 12+ */
+    animation:         opacity 5s infinite; /* IE 10+, Fx 29+ */
+}
+@keyframes opacity{
+      0%{
+        opacity: 1;
+      }
+      50%{
+        opacity: .4;
+      }
+      100%{
+        opacity: 1;
+      }
+      
+}
 #how-would-you-web{
     width: 90%;
     max-width: 960px;
 }
+.quote{
+    font-weight: bold;
+    font-style: normal;
+}
+.quote.is-visible{
+    animation-name: color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation: color 5s infinite; /* Safari 4+ */
+    -moz-animation:    color 5s infinite; /* Fx 5+ */
+    -o-animation:      color 5s infinite; /* Opera 12+ */
+    animation:         color 5s infinite; /* IE 10+, Fx 29+ */
+}
+.quote:hover{
+    font-weight: bolder;
+    cursor: pointer;
+}
+
 #how-would-you-mobile{
     display:none;
     max-width: 320px;
@@ -235,31 +276,46 @@ header {
     color: #9cb7c5;
 }
 .mobile-quote a{
-    color: #a86561;
+    color:  #9cb7c5;
     font-weight: bold;
     font-style: normal;
+    font-size: 1em;
     transition: all 2s .25s ease-out;
 }
- 
-.quote a{
-    color: #a86561;
-    font-weight: bold;
-    font-size: 1em;
-    font-style: normal;
-}
-.quote a:hover, .mobile-quote a:hover{
-    color: #397e7a;
-    transition: all .25s .25s ease-out;
-}
-
-.quote.is-visible{
-    font-style: normal;
-}
 .mobile-quote.is-visible{
-    font-style: normal;
+    color: #809dac;
+    animation-name: color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation: color 5s infinite; /* Safari 4+ */
+    -moz-animation:    color 5s infinite; /* Fx 5+ */
+    -o-animation:      color 5s infinite; /* Opera 12+ */
+    animation:         color 5s infinite; /* IE 10+, Fx 29+ */
 }
+/* @keyframes color{
+      0%{
+        color: #809dac;
+      }
+      50% {
+        color:#213131;
+      }
+      100%{
+       color:  #809dac;
+      }
 
+} */
+      @keyframes color{
+      0%{
+        color: #b88a93;
+      }
+      50% {
+        color:#5d4c4e;
+      }
+      100%{
+       color:  #b88a93;
+      } 
 
+}
 
 
 
