@@ -238,13 +238,13 @@ header {
         opacity: 1;
       }
       25%{
-        opacity: .5
+        opacity: .6
       }
       50%{
         opacity: .3;
       }
       75%{
-        opacity: .5
+        opacity: .6
       }
       100%{
         opacity: 1;
