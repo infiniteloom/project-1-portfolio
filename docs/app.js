@@ -66,7 +66,7 @@ const showMenu =(event) =>{
             if($(this)=== $burger || $(this) === $links ){
                 show = false;
              }else{
-                // $('.close').css('display', 'none');
+                $('.close').css('opacity', '0');
                 $burger.css('display', 'block');    
                 $('.inline-menu').css('display', 'block');
                 // $('.mobile-menu-show').css('opacity', '0');
@@ -86,7 +86,7 @@ const showMenu =(event) =>{
              show = false;
             
         }else{
-            // $('.close').css('display', 'block');
+            $('.close').css('opacity', '1');
             $('.inline-menu').css('display', 'none');
             // $('.mobile-menu-show').css('opacity', '1');
             // $('.mobile-menu-show').css('display','block');
