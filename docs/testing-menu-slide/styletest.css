@@ -1,5 +1,5 @@
 
-
+/* 
 .mobile-menu-back{
     margin-left: -90000px;
     position: fixed;
@@ -8,8 +8,8 @@
     bottom: 0px;
     width: 20%;
     z-index:1000;
-    -webkit-transition: margin 1s ease-in-out;
-    transition: margin 1s ease-in-out;
+    -webkit-transition: margin 2s ease-in-out;
+    transition: margin 2s ease-in-out;
 }
 .close{
     position: fixed;
@@ -19,9 +19,8 @@
     right: 50%;
     z-index: 200;
 }
-.testing:hover{
+.close:hover{
     margin-left: 0px;
-    /* transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) .5s; */
 }
 
 .mobile-menu-container{
@@ -49,10 +48,177 @@
 .mobile-menu a{
     display: block;
 
+} */
+ 
+html{
+    scroll-behavior: smooth;
 }
-/*
+
+body {
+    background-color: #ffffff;
+    margin: 0 auto;
+    min-width: 320px;
+    width: 100%;
+    font-size: 15px;
+    font-family: 'EB Garamond', serif;
+    color: #397e7a;
+    text-align: center;
+}
+
+main{
+    padding-top:50px;
+}
+
+p{
+    color: 	#397e7a;
+    font-family: 'EB Garamond', serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: 	#397e7a;
+    text-decoration: none;
+}
+a:hover{
+    color: grey;
+    transition: all 300ms;
+}
+header {
+    width: 100%;
+    min-width: 320px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 0px;
+    z-index: 10;
+    position: fixed;
+    text-align: center;
+}
+
+#header-wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+     transition: opacity 1s .25s ease-out;
+     opacity: 0;
+     will-change: opacity;
+}
+#header-wrapper.is-visible {
+    opacity: 1;
+
+    }
+
+  
+.title-name a{
+    font-size:20px;
+    padding-left: 20px;
+}
+.title-name a:hover{
+    color: gold;
+    transform: scale(1.01);
+}
+.inline-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 20px;
+}
+.item_menu{
+    color: 	#397e7a;
+    padding: 10px 10px 5px 10px;
+    text-decoration: none;
+}
+
+.item_menu:hover{
+    color: grey;
+    transform: scale(1.01);
+    border-bottom: 1px solid;
+    transition: all 300ms;
+}
+
+.burger{
+    display:none;
+    color: 	#397e7a;
+    font-size: extra-large;
+}
+
+.burger:hover{
+    color: gold;
+}
+
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 10%;
+    z-index: 1005;
+    padding: 22px;
+    line-height: 0;
+    width: 40px;
+    height: 40px;
+}
+#closeX{
+    width: 20px;
+    height: 20px;
+    color: rgba(141, 97, 108, 0.9);
+    font-size: 1.5em;
+}
+.mobile-menu-back.mobile-menu-show{
+    margin-left: 0;
+    background-color: rgba(241,216,222, 1);
+    transition: margin-left 1.5s ease-out, background-color 2s;
+    transition-property: margin-left;
+    transition-delay: 0s;
+}
+.mobile-menu-back.mobile-menu-hide{
+    background-color: rgba(241,216,222, 1);
+    margin-left: -900000px;
+    transition: margin-left 1.5s ease-out, background-color 2s;
+    transition-property: margin-left;
+    transition-delay: 0s;
+}
+.mobile-menu-back{
+    position: fixed;
+    margin-left: -90000px;
+    transition: margin-left 1.5s ease-out, background-color 2s;
+    transition-property: margin-left;
+    transition-delay: 0s;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index:1000;
+}
+.mobile-menu-container{
+    position: absolute;
+    background-color: rgba(241,216,222, 1);
+    padding: 20% 10px 20% 10%;
+    top: 0;
+    bottom: 0;
+    z-index: 1002;
+    width: 60%;
+    overflow:hidden;
+}
+.mobile-menu{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1003;
+    width: 100%;
+    padding: 36px;
+    overflow: auto;    
+}
 .mobile-menu-links{
-    font-size:1.6em;
+    display:block;
+    font-size: 1.6em;
     font-weight: bold;
     color:  #90acaa;
     letter-spacing: .04em;
@@ -65,5 +231,35 @@
     padding-bottom: .618em;
     text-align: left;
     z-index: 1003;
+}
+
+
+@media screen and (max-width: 620px){
+
+    header{
+        width: 100%;
+    }
+    #header-wrapper{
+        justify-content: space-around;
+        align-items: center;
+        padding: 1em 0 0 0;
+        margin: 0;
+    }
+    .title-name a{
+        padding: 0px;
+        width: 50%;
+    }
+    .item_menu{
+        display:none;
+        background-color: rgba(241,216,222, .9);
+        font-size: smaller;
+        padding: 1em 0 1em 0;
+    }
+    .last-item-menu{
+        padding-bottom: 30px;
+    }
+    .burger{
+        display: block;
+    }    
 
 } */

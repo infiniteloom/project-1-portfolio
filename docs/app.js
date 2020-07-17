@@ -74,6 +74,8 @@ const showMenu =(event) =>{
                 // $('.mobile-menu-show').css('margin-left','-900000px');
                 $('.mobile-menu-back').removeClass('mobile-menu-show');
                 $('.mobile-menu-back').addClass('mobile-menu-hide');
+                $('.mobile-menu-container').removeClass('mobile-menu-show');
+                $('.mobile-menu-container').addClass('mobile-menu-hide');
                 // $mobileLinks.css('display','none');
                 $('.title-name').css('display','block');
 
@@ -91,6 +93,8 @@ const showMenu =(event) =>{
             // $('.mobile-menu-show').css('margin-left','0');
             $('.mobile-menu-back').removeClass('mobile-menu-hide');
             $('.mobile-menu-back').addClass('mobile-menu-show');
+            $('.mobile-menu-container').removeClass('mobile-menu-hide');
+            $('.mobile-menu-container').addClass('mobile-menu-show');
             // $mobileLinks.css('display','block');
             $('.title-name').css('display','none');
             $burger.css('display', 'none');

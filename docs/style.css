@@ -53,7 +53,7 @@ header {
     justify-content: space-between;
     padding: 0 20px 0 20px;
      /* scroll-animations keywords */
-     transition: opacity 2s 1s ease-out;
+     transition: opacity 1s .25s ease-out;
      opacity: 0;
      will-change: opacity;
 }
@@ -124,17 +124,21 @@ header {
     margin-left: 0;
     background-color: rgba(241,216,222, 1);
     /* opacity: 1; */
-    transition: margin-left 1.5s ease-in-out, background-color 2s;
+    transition: margin-left 1.5s ease-out, background-color 2s;
+    transition-property: margin-left;
+    transition-delay: 0s;
 }
 .mobile-menu-back.mobile-menu-hide{
     /* opacity: 0; */
     background-color: rgba(241,216,222, 1);
     margin-left: -900000px;
-    transition: margin-left 1.5s ease-in-out, background-color 2s;
+    transition: margin-left 1.5s ease-out, background-color 2s;
+    transition-property: margin-left;
+    transition-delay: 0s;
 }
 .mobile-menu-back{
     position: fixed;
-    /* opacity: 0; */
+    /* opacity: 1; */
     top: 0px;
     bottom: 0px;
     width: 100%;
@@ -143,7 +147,6 @@ header {
 .mobile-menu-container{
     position: absolute;
     background-color: rgba(241,216,222, 1);
-    /* opacity: 1; */
     padding: 20% 10px 20% 10%;
     top: 0;
     bottom: 0;
@@ -152,13 +155,15 @@ header {
 }
 .mobile-menu-container.mobile-menu-show{
     margin-left: 0x;
-    /* opacity: 1; */
     transition: margin-left .5s ease-in-out;
+    transition-property: margin-left;
+    transition-delay: 0s;
 }
 .mobile-menu-container.mobile-menu-hide{
     margin-left: -900000px;
-    /* opacity: 1; */
     transition: margin-left .5s ease-in-out;
+    transition-property: margin-left;
+    transition-delay: 0s;
 }
 .mobile-menu{
     -webkit-box-sizing: border-box;
@@ -636,286 +641,290 @@ footer{
 /* MEDIA QUERY*/
 @media screen and (max-width: 320x) {
 
-#intro, #how-would-you, #about, #projects, #artist-website, #metaphor, #contact {
-    width: 100%;
+    #intro, #how-would-you, #about, #projects, #artist-website, #metaphor, #contact {
+        width: 100%;
+    }
+
+    #intro{
+        height: 100vh;
+    }
+
+
+
+
+    header{
+        width: 100%;
+        height: 100%;
+    }
+    #header-wrapper{
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 1em;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+    .title-name a{
+        padding: 0;
+        width: 50%;
+    }
+    .item_menu{
+        display:none;
+        background-color: rgba(241,216,222, .9);
+        font-size: smaller;
+        padding: 1em 0 1em 0;
+    }
+    .last-item-menu{
+        padding-bottom: 30px;
+    }
+    .inline-menu{
+        display:block;
+        width: 100%;
+    }
+    .burger{
+        display: block;
+    }
+
+
+
+
+
+
+
+
+    #how-would-you{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    #how-would-you-web{
+        display: none;
+    }
+    #how-would-you-mobile{
+        display: block;
+        height: 100%;
+    }
+
+
+
+
+
+
+    #about{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        background-color: #dbe6e5;
+    }
+    #about-text{
+        width: 90%;
+        padding: 5%;
+        height: 100%;
+        position: relative;
+        transition: all .25s .25s ease-out;
+    }
+    #about-img-web{
+        display: none;
+    }
+    #about-img-mobile{
+        display: block;
+    }
+
+
+
+
+    #projects{
+        padding:100px 0 100px 0;
+    }
+    #projects-code div{
+        width: 100%;
+        height: 250px;
+    } 
+
+
+
+
+    #artist-website {
+        width: 100%;
+        height: 80%;
+        margin: 0;
+    }
+    #artist-website p,   #artist-website a span{
+        width: 100%;
+        margin: 0;
+    } 
+
+
+    #metaphor p{
+        padding: 0 20px 0 20px;
+        height: 70%;
+        font-size: .9em;
+    }
+
+
+
+
+    #contact{
+        padding-left: 10px;
+    }
+    .form-input{
+        width: 300px;
+    }
+    .form-input-message{
+        width: 300px;
+    }
+    .form button{
+        height: 2em;
+        padding-left: 170px;
+    }
+    .form button p{
+        font-family: 'EB Garamond', serif;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+
+
+    footer{
+        width: 100%;
+        
+    }
+    #footer-menu{
+        width: 100%;
+    }
 }
 
-#intro{
-    height: 100vh;
-}
 
 
 
-
-header{
-    width: 100%;
-    height: 100%;
-}
-#header-wrapper{
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 1em;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-}
-.title-name a{
-    padding: 0;
-    width: 50%;
-}
-.item_menu{
-    display:none;
-    background-color: rgba(241,216,222, .9);
-    font-size: smaller;
-    padding: 1em 0 1em 0;
-}
-.last-item-menu{
-    padding-bottom: 30px;
-}
-.inline-menu{
-    display:block;
-    width: 100%;
-}
-.burger{
-    display: block;
-}
-
-
-
-
-
-
-
-
-#how-would-you{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-#how-would-you-web{
-    display: none;
-}
-#how-would-you-mobile{
-    display: block;
-    height: 100%;
-}
-
-
-
-
-
-
-#about{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    background-color: #dbe6e5;
-}
-#about-text{
-    width: 90%;
-    padding: 5%;
-    height: 100%;
-    position: relative;
-    transition: all .25s .25s ease-out;
-}
-#about-img-web{
-    display: none;
-}
-#about-img-mobile{
-    display: block;
-}
-
-
-
-
-#projects{
-    padding:100px 0 100px 0;
-}
-#projects-code div{
-    width: 100%;
-    height: 250px;
-} 
-
-
-
-
-#artist-website {
-    width: 100%;
-    height: 80%;
-    margin: 0;
-}
-#artist-website p,   #artist-website a span{
-    width: 100%;
-    margin: 0;
-} 
-
-
-#metaphor p{
-    padding: 0 20px 0 20px;
-    height: 70%;
-    font-size: .9em;
-}
-
-
-
-
-#contact{
-    padding-left: 10px;
-}
-.form-input{
-    width: 300px;
-}
-.form-input-message{
-    width: 300px;
-}
-.form button{
-    height: 2em;
-    padding-left: 170px;
-}
-.form button p{
-    font-family: 'EB Garamond', serif;
-    font-weight: bold;
-    font-size: 2em;
-}
-
-
-
-footer{
-    width: 100%;
-    
-}
-#footer-menu{
-    width: 100%;
-}
-}
 @media screen and (max-width: 620px) {
-#intro #how-would-you #about #projects #video #artist-website #metaphor #contact {
-    width: 100%;
-}
+    #intro #how-would-you #about #projects #video #artist-website #metaphor #contact {
+        width: 100%;
+    }
 
-#intro{
-    height: 100vh;
-}
-
-
-
-header{
-    width: 100%;
-}
-#header-wrapper{
-    justify-content: space-around;
-    align-items: center;
-    padding: 1em 0 0 0;
-    margin: 0;
-}
-.title-name a{
-    padding: 0px;
-    width: 50%;
-}
-.item_menu{
-    display:none;
-    background-color: rgba(241,216,222, .9);
-    font-size: smaller;
-    padding: 1em 0 1em 0;
-}
-.last-item-menu{
-    padding-bottom: 30px;
-}
-.burger{
-    display: block;
-}    
-
-
-#how-would-you{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-#how-would-you-web{
-    display: none;
-}
-#how-would-you-mobile{
-    display: block;
-}
+    #intro{
+        height: 100vh;
+    }
 
 
 
+    header{
+        width: 100%;
+    }
+    #header-wrapper{
+        justify-content: space-around;
+        align-items: center;
+        padding: 1em 0 0 0;
+        margin: 0;
+    }
+    .title-name a{
+        padding: 0px;
+        width: 50%;
+    }
+    .item_menu{
+        display:none;
+        background-color: rgba(241,216,222, .9);
+        font-size: smaller;
+        padding: 1em 0 1em 0;
+    }
+    .last-item-menu{
+        padding-bottom: 30px;
+    }
+    .burger{
+        display: block;
+    }    
 
 
-#about{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 50%;
-    background-color: #dbe6e5;
-}
-#about-text{
-    width: 90%;
-    padding: 5%;
-    display: block;
-    position: relative;
-}
-#about-text.is-visible p{ 
-    transition: opacity .2s .25s ease-out;
-}
-#about-img-web{
-    display: none;
-
-}
-#about-img-mobile{
-    display: block;
-} 
+    #how-would-you{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    #how-would-you-web{
+        display: none;
+    }
+    #how-would-you-mobile{
+        display: block;
+    }
 
 
 
 
 
-#projects{
-    padding:100px 0 100px 0;
-}
-#projects-code div{
-    width: 100%;
-    height: 250px;
-}
+    #about{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 50%;
+        background-color: #dbe6e5;
+    }
+    #about-text{
+        width: 90%;
+        padding: 5%;
+        display: block;
+        position: relative;
+    }
+    #about-text.is-visible p{ 
+        transition: opacity .2s .25s ease-out;
+    }
+    #about-img-web{
+        display: none;
+
+    }
+    #about-img-mobile{
+        display: block;
+    } 
 
 
 
 
 
-#video{
-    width: 100%;
-}
+    #projects{
+        padding:100px 0 100px 0;
+    }
+    #projects-code div{
+        width: 100%;
+        height: 250px;
+    }
 
 
 
 
 
-#artist-website {
-    width: 100%;
-    height: 80%;
-    margin: 0;
-}
-
-#artist-website p,   #artist-website p a span{
-    width: 100%;
-    margin: 0;
-} 
+    #video{
+        width: 100%;
+    }
 
 
 
 
+
+    #artist-website {
+        width: 100%;
+        height: 80%;
+        margin: 0;
+    }
+
+    #artist-website p,   #artist-website p a span{
+        width: 100%;
+        margin: 0;
+    } 
+
+
+
+/* 
 #photography{
     width: 100%;
     height: 100%;
@@ -927,7 +936,7 @@ header{
     "a a d d e e f f"
     "g g g g h h f f"
     "g g g g h h f f";
-}
+} */
 
 
 
