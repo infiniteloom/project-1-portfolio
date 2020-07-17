@@ -102,9 +102,9 @@ header {
 }
 .close{
     display:none;
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
+    right: 10%;
     z-index: 1005;
     padding: 22px;
     line-height: 0;
@@ -121,7 +121,7 @@ header {
 }
 .mobile-menu-show{
     margin-left: -90000px;
-    /* display:none; */
+    transition: margin-left 0s, cubic-bezier(.62,.02,.1,1) .5s;
 }
 
 
@@ -618,12 +618,9 @@ footer{
     }
     .mobile-menu-show{
         margin-left: -90000px;
-        -webkit-transition: margin-left 0s 525ms,cubic-bezier(.55,0,.1,1) 1s;
-        -moz-transition: margin-left 0s 525ms,cubic-bezier(.55,0,.1,1) 1s;
-        -ms-transition: margin-left 0s 525ms,cubic-bezier(.55,0,.1,1) 1s;
-        -o-transition: margin-left 0s 525ms,cubic-bezier(.55,0,.1,1) 1s;
-        transition: margin-left 0s 525ms,cubic-bezier(.55,0,.1,1) 1s;
-    }
+        transition: margin-left 0s;
+        transition: margin-left 0s, cubic-bezier(.62,.02,.1,1) .5s;
+        }
     .mobile-menu-back{
         position: fixed;
         top: 0px;
@@ -631,19 +628,16 @@ footer{
         width: 100%;
         z-index:1000;
         margin-left: -90000px;
-        -webkit-transition: margin-left 0s 525ms,background-color 1s, cubic-bezier(.55,0,.1,1) 1s;
-        -moz-transition: margin-left 0s 525ms,background-color 1s, cubic-bezier(.55,0,.1,1) 1s;
-        -ms-transition: margin-left 0s 525ms,background-color 1s, cubic-bezier(.55,0,.1,1) 1s;
-        -o-transition: margin-left 0s 525ms,background-color 1s, cubic-bezier(.55,0,.1,1) 1s;
-        transition: margin-left 0s 525ms,background-color 1s, cubic-bezier(.55,0,.1,1) 1s;
-
-    }
+        transition: margin-left 0s, cubic-bezier(.62,.02,.1,1) .5s;
+        }
     .mobile-menu-container{
         position: absolute;
+        background-color: rgba(241,216,222, 1);
+        padding: 20% 10px 20% 10%;
         top: 0;
         bottom: 0;
         z-index: 2;
-        width: calc(100% - 60px );
+        width: 60%;
     }
     .mobile-menu{
         -webkit-box-sizing: border-box;
@@ -656,8 +650,8 @@ footer{
         width: 100%;
         padding: 36px;
         overflow: auto;
-        
-    }
+        transition: all 2s 0.2s ease-out;
+        }
     .mobile-menu-links{
         display:none;
         font-size: 1.6em;
@@ -813,9 +807,7 @@ footer{
     }
     .item_menu{
         display:none;
-        /* border-bottom: 1px solid rgba(255, 255, 255, 0.9); */
         background-color: rgba(241,216,222, .9);
-        /* transition: background 1s .25s ease-out; */
         font-size: smaller;
         padding: 1em 0 1em 0;
     }
@@ -827,35 +819,40 @@ footer{
     }    
     .mobile-menu-show{
         margin-left: -90000px;
-        padding: 10% 10px 20% 10px;
-        -webkit-transition: margin-left 0s, cubic-bezier(.55,0,.1,1) 1s;
-        -moz-transition: margin-left 0s, cubic-bezier(.55,0,.1,1) 1s;
-        -ms-transition: margin-left 0s, cubic-bezier(.55,0,.1,1) 1s;
-        -o-transition: margin-left 0s, cubic-bezier(.55,0,.1,1) 1s;
-        transition: margin-left 0s, cubic-bezier(.55,0,.1,1) 1s;
+        transition: margin-left 0s, cubic-bezier(.62,.02,.1,1) .5s;
     }
     .mobile-menu-back{
         position: fixed;
         background-color: rgba(241,216,222, 1);
         margin-left: -900000px;
+        transition: margin-left 0s, cubic-bezier(.62,.02,.1,1) .5s;
         top: 0px;
         bottom: 0px;
         width: 100%;
         z-index:1000;
-        -webkit-transition: margin-left 0s,background-color 1s, cubic-bezier(.55,0,.1,1) 1s;
-        -moz-transition: margin-left 0s,background-color 1s, cubic-bezier(.55,0,.1,1) 1s;
-        -ms-transition: margin-left 0s,background-color 1s, cubic-bezier(.55,0,.1,1) 1s;
-        -o-transition: margin-left 0s,background-color 1s, cubic-bezier(.55,0,.1,1) 1s;
-        transition: margin-left 0s,background-color 1s, cubic-bezier(.55,0,.1,1) 1s;
     }
 
     .mobile-menu-container{
         position: absolute;
+        background-color: rgba(241,216,222, 1);
+        padding: 20% 10px 20% 10%;
         top: 0;
         bottom: 0;
         z-index: 1002;
-        width: calc(100% - 60px );
+        width: 60%;
         overflow:hidden;
+    }
+    .mobile-menu{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1003;
+        width: 100%;
+        padding: 36px;
+        overflow: auto;    
     }
     
     .mobile-menu-links{
