@@ -101,7 +101,6 @@ header {
     color: gold;
 }
 .close{
-    display:none;
     position: fixed;
     top: 0;
     right: 10%;
