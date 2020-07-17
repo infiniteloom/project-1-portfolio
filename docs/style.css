@@ -270,13 +270,13 @@ header {
 }
 @keyframes color{
     0%{
-    color: #b88a93;
+    color:  #627f8d;
     }
     50% {
-    color:#5d4c4e;
+    color:#445b66;
     }
     100%{
-    color:  #b88a93;
+    color:  #627f8d;
     } 
 }
 .quote:hover{
