@@ -58,9 +58,11 @@ let show = false;
 
 // function to handle the click event for burger menu hide/show
 const showMenu =(event) =>{
+    
     let width = window.innerWidth;
     // console.log(width)
     if(width < 400){
+
         // console.log('this is smaller than 400')
         if(show){
             if($(this)=== $burger || $(this) === $links ){
