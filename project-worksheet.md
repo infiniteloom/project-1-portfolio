@@ -100,8 +100,6 @@ Low-priority features (priority level indicated from top to bottom) (total 17-19
 JSON:
 - Pull data using google json api
 - Render data on page 
-<!-- - Allow user to choose favorite
-- Save their choices in firebase -->
 
 Menu:
 - Menu bar with flex for browser, styling (1-2hrs)
@@ -138,7 +136,7 @@ Features:
 
 
 ## Additional Libraries
-jQuery was used as a toggle to trigger certain CSS animations when the sections were in range of the screen size. 
+jQuery was used as a toggle to trigger certain CSS animations when the sections were in range of the screen size and also to toggle menu items from being shown and hidden for different states. 
 
 
 
@@ -224,6 +222,7 @@ In the meantime, I did learn a lot more about CSS animations than I would have w
 
 In the function that handles the menu event listeners below, $('.mobile-menu-back').css('margin-left','-900000px'); and $('.mobile-menu-back').css('margin-left','0'); specifically target the slide-in animation effect for the mobile menu items (paired with CSS below this JS code snippet) by setting the margin-left so far off the screen that it is hidden then bringing it back to 0 when it is meant to be shown. I initially used display block and display none which work similarly but, as I learned, override any animation properties from the CSS. 
 
+
 ```
 ///// MENU TOGGLING FOR WEB /MOBILE
 // global variables for burger hide /show actions
@@ -275,4 +274,23 @@ $close.on('click', showMenu);
 $mobileLinks.on('click', showMenu);
 
 
+```
+The JS code above triggers this div to toggle between off-screen (margin-left: -9000px) and on-screen(margin-left: 0). This div holds all the divs that the mobile menu is made of so this toggle only needs to be applied to this parent div with the class of mobile-menu-back.
+
+```
+.mobile-menu-back{
+    position: fixed;
+    margin-left: -9000px;
+    background-color: rgba(241,216,222, 1);
+    transition: margin-left .25s,background-color 500ms cubic-bezier(.55,0,.1,1) 200ms;
+    transition-property: margin-left, background-color;
+    transition-duration: .25s, 700ms;
+    transition-timing-function: ease-out, cubic-bezier(0.55, 0, 0.1, 1);
+    transition-timing-function: ease-out, cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: 0s, 0s;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index:1000;
+}
 ```
