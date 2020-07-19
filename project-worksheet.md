@@ -45,7 +45,7 @@ https://loamlove.com
 
 ## Google Sheet
 
-Include link to your google sheet here.  Here is the sample [Suresh had used in class](https://docs.google.com/spreadsheets/d/1V1M3Eq1NXH2PNmeTlVviRhEjX9kenq769Vo2P5mMtro/edit#gid=0) 
+Here is the sample [Suresh had used in class](https://docs.google.com/spreadsheets/d/1V1M3Eq1NXH2PNmeTlVviRhEjX9kenq769Vo2P5mMtro/edit#gid=0) 
 
 
 
@@ -136,64 +136,143 @@ Features:
 
 
 
-## Functional Components
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into functional components, and by that we mean functions.  Try and capture what logic would need to be defined if the game was broken down into the following categories.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
-
-
-
-#### MVP
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Hamburger | H | 1hr | 1.5hr | -hr|
-| Project Previews | H | 3hr | -hr | -hr|
-| Regular Nav | H | H | -hr | -hr|
-| Adding Form | H | 1.5hr| -hr | -hr |
-| Other sections and flex| M | 4hr | 2hr | -hr|
-| Working with API | H | 3hrs| 2hr | -hr |
-| Responsive | H | 3hr | -hr | -hr|
-| Social Media Icons | L | 1hr | -hr | -hr|
-| Total | H | 15.5hrs| -hrs | -hrs |
-
-
-
-#### PostMVP
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Project Hover | L | 3hr | -hr | -hr|
-| Banner letters wiggle | L | 1hr | -hr | -hr|
-| Interactive Banner | M | 4hr | -hr | -hr|
-| Materialize | H | 4hr | -hr | -hr|
-| Bootstrap | H | 4hr | -hr | -hr|
-| Make own icon | L | 4hr | -hr | -hr|
-| Total | H | 20hrs| -hrs | -hrs |
-
-
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+jQuery was used as a toggle to trigger certain CSS animations when the sections were in range of the screen size. 
+
 
 
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
+I had a great time with implementing and learning about various CSS animations including changes in opacity, slide-in text animation, moving images and a section featuring animated text that had an infinite opacity/gradient shift. 
+
+All of the sections that were indicated to have animations were attributed with a class of 'show-on-scroll' in addition to possibly another class that was used for the main stylings of the section.
+
+
+In my JavaScript code, I created a series of functions (with the help of some great code found on a stackoverflow forum) that grabbed all elements with the 'show-on-scroll' class, used a forEach loop on the gathered array to see if any of those elements were within the range of the screen. 
+
+The structure of this code block is fascinating to me because it uses a loop() function that runs perpetually and checks to see if an element is within the view of the screen. The loop() function will add a class of 'is-visible' to any element that is detected within screen and removes the class if it is not detected. The loop() function then sends the result as an argument to another function called scroll that has a set timer on it. Together, these functions trigger the computer to check if an element is visible or not, applly a special class to it that will trigger the specific animation for that element and update the animation/ continue to check if it is in view at a rate of 60 frames per second.  
+
+
+"The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint." (MDN)
+
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+let scroll = window.requestAnimationFrame ||
+    function(callback){ window.setTimeout(callback, 1000/60)};
+let elementsToShow = document.querySelectorAll('.show-on-scroll');
+
+
+const loop = () =>{
+    elementsToShow.forEach(element =>{
+        if(isElementInViewport(element)){
+            element.classList.add('is-visible');
+        }else{
+            element.classList.remove('is-visible');
+        }
+    });
+    scroll(loop);
 }
+
+
+
+loop();
 ```
+
+
+The way the loop function detects if a section is in view or not is a separate function called ifElementInViewport() which is used to return a Boolean value and serves as the two conditional if/else expressions in this function. If ifElementInViewport(element) returns true, the class of is-visible will be added to the element in viewport. 
+
+
+This codeblock makes use of some built-in JavaScript code such as window.innerHeight (which essentially calls a function on the global object of 'window' that returns the inner height value as a number) that detects a viewport's dimensions so that the code can use that data to determine whether or not an element is within range. 
+
+```
+
+// Derived from a helper function at: http://stackoverflow.com/a/7557433/274826
+function isElementInViewport(el) {
+    // special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+      el = el[0];
+    }
+    var rect = el.getBoundingClientRect();
+
+    return (
+        (rect.top <= 0
+          && rect.bottom >= 0)
+        ||
+        (rect.bottom >= (window.innerHeight  || document.documentElement.clientHeight ) &&
+          rect.top <= (window.innerHeight  || document.documentElement.clientHeight ))
+        ||
+        (rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight  || document.documentElement.clientHeight ))
+      );
+  }
+
+```
+
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+Issue 1:
+I created a mobile menu with a slide-in animation that took two days to debug and I'm still not 100% why it won't work properly all of the time. 
 
-## Previous Project Worksheet
- - [Readme's](https://github.com/jkeohan/fewd-class-repo/tree/master/final-project-worksheet/project-worksheet-examples)
- - [Best of class readme](https://github.com/jkeohan/fewd-class-repo/blob/master/final-project-worksheet/project-worksheet-examples/portfolio-gracie.md)
+I was inspired by a slide in menu on loamlove.com and have noticed this feature on several websites. I had a feeling something in my code was overriding the transitions as I learned that certain properties like display: block will negate any transition speeds but after several hours of refactoring my code, I still could not locate the trouble area. 
+
+I brought my issue to Alex after many hours of research and he suggested to try just the menu code in a new file and tweak it till it works. I got this to work quickly but still could not successfully implement back into my original program. The menu works but does not have the same smooth quality that I have been hoping for. I resolved to let it rest for some time and come back to it with fresh eyes. 
+
+In the meantime, I did learn a lot more about CSS animations than I would have without all the extra time spent on researching them.
+
+In the function that handles the menu event listeners below, $('.mobile-menu-back').css('margin-left','-900000px'); and $('.mobile-menu-back').css('margin-left','0'); specifically target the slide-in animation effect for the mobile menu items (paired with CSS below this JS code snippet) by setting the margin-left so far off the screen that it is hidden then bringing it back to 0 when it is meant to be shown. I initially used display block and display none which work similarly but, as I learned, override any animation properties from the CSS. 
+
+```
+///// MENU TOGGLING FOR WEB /MOBILE
+// global variables for burger hide /show actions
+const $burger = $('.burger');
+const $links = $('.item_menu'); 
+const $mobileLinks = $('.mobile-menu-links');
+const $close = $('.close');
+let show = false;
+
+// function to handle the click event for burger menu hide/show
+const showMenu =(event) =>{
+    // detects if this is a small screen/mobile, confirms the need for a burger menu
+    let width = window.innerWidth;
+    if(width < 400){
+        // show does not need to be written as show === true because it will essentially be read as truthy if it has any data passing through that is not a distinctly falsy value (0, null, undefined)
+        if(show){
+            // if this element is the burger menu icon or a web link, the mobile menu will not be show (it should be hidden when the burger icon is clickable).
+            if($(this)=== $burger || $(this) === $links ){
+                show = false;
+            }else{
+                // if anything other than the burger or a web link is clicked, then do these things:
+                $burger.css('display', 'block');    
+                $('.inline-menu').css('display', 'block');
+                // this is part of the slide-in animation- sending the mobile menu from way off screen to the left to hide it and bringing margin-left back to 0 to show it. 
+                $('.mobile-menu-back').css('margin-left','-900000px');
+                $('.title-name').css('display','block');
+                $links.each(function(index){
+                    $(this).css('display', 'none');
+                });
+            }
+             show = false;
+        
+        // If the status of show is false, meaning the menu is not visible when the element passed through is clicked, then do these things:
+        }else{
+            $('.inline-menu').css('display', 'none');
+            $('.mobile-menu-back').css('margin-left','0');
+            $('.title-name').css('display','none');
+            $burger.css('display', 'none');
+            show = true;       
+            }
+    }else{
+        return
+    }
+}
+
+$burger.on('click', showMenu);
+$links.on('click', showMenu);
+$close.on('click', showMenu);
+$mobileLinks.on('click', showMenu);
+
+
+```
