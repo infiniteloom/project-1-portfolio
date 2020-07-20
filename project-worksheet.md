@@ -1,33 +1,27 @@
 # Project Overview
+https://infiniteloom.github.io/project-1-portfolio/
 
 ## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
 |  Day | Deliverable | Status
 |---|---| ---|
 |Day 1| Project Description | Complete
-|Day 2| Wireframes / Priority Matrix / Timeline | Complete
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Complete
-|Day 4| MVP & Bug Fixes | Complete
-|Day 5| Final Touches | Incomplete
+|Day 1| Wireframes / Priority Matrix / Timeline | Complete
+|Day 1| Core Application Structure (HTML, CSS, etc.) | Complete
+|Day 2, 3| MVP & Bug Fixes | Complete
+|Day 4, 5| Final Touches | Complete
 |Day 6| Present | Incomplete
 
 
 ## Project Description
 
-My website will have a landing page with a semi-transparent white background header- title to the left and menu to the top right (lea thomas    'projects', 'about', 'contact').
-This intro section will have a 100% wide image of myself with weavings. 
+My website is an infinite scroll layout with a semi-transparent white background header- title to the left and menu to the top right (lea thomas    'projects', 'about', 'contact') and a semi-transparent green-grey footer with social links and a jump to top link.
 
-The website is an infinite scroll display that jumps to sections when links are clicked. There will be additional unlinked sections that showcase my artistic projects. 
+This intro section will have a 100% wide image of myself with weavings that fades in upon site load, along with the header.
 
-Emphasis on creative displays, i.e. implementing on:hover darkening, slow show and grow effects (darkening would be on click for mobile) to create a sense of transition while the endless scroll projects page spans different sections/project thumbnails/divs.
+Top menu links jump to page sections with a smooth scroll. There will be additional unlinked sections that showcase my artistic projects for eye candy between linked sections, encouraging a continuous and engaging scroll. 
 
-Continuing to scroll down will lead to the about page, some creative sections to showcase my artistic work and the contact form. 
-
-Bonus if I can figure out how to click on the menu item and have the browser jump down to a section of the page. (Nailed it!)
+Emphasis on creative displays, CSS animations (keyframe and transitions) i.e. implementing on:hover/on-click darkening, slow show and grow effects to create a sense of transition and interaction throughout the site.
 
 
 Inspiration:
@@ -35,23 +29,18 @@ Inspiration:
 - Parallax scrolling styles:
 https://www.crema.us/contact
 
-- Three column project thumbnail with slow-show text when div is centered on page. 
-https://yardnyc.com/
-
-- Color scheme:
+- Slide-in mobile menu:
 https://loamlove.com
 
 
 
 ## Google Sheet
 
-Here is the sample [Suresh had used in class](https://docs.google.com/spreadsheets/d/1V1M3Eq1NXH2PNmeTlVviRhEjX9kenq769Vo2P5mMtro/edit#gid=0) 
+https://docs.google.com/spreadsheets/d/1cPPgvKuA_8-PHICX1skEGzDlnZQLqOFcqlOzKEIEoSg/edit#gid=0
 
 
 
-## Wireframes
-
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Do not include the actual image and have it render on the page.  
+## Wireframe
 
 - [Mobile](https://cloudinary.com/console/c-484e30e1d7e8f448a6d118584bab29/media_library/folders/ff9843dc6308db13b078ac873f943679)
 - [Tablet](https://cloudinary.com/console/c-484e30e1d7e8f448a6d118584bab29/media_library/folders/ff9843dc6308db13b078ac873f943679)
@@ -59,7 +48,7 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 Wireframing Resources Used:
 
-- [Mockflow](https://support.mockflow.com/article/108-how-to-share-projects-in-mockflow)
+- [Mockflow] 
 
 
 
@@ -73,12 +62,13 @@ Pulling Data from JSON (total 3-5hrs?):
 - Allow user to choose favorite
 - Save their choices in firebase
 
-General CSS (total 7hr): 
-- Black background / white text with some color/ dark theme implementation (1hr)
-- Creating CSS grid, triple column thumbnails for projects (1hr)
-- Thumbnails styling: centering, brightness down, subtle grow on:hover (2hr)
-- Thumbnails copy for captions and styling (2hr)
-- Import and implement fonts (1hr)
+General HTML/ CSS (total 7-8hr): 
+- Creating sections for pages (.5hr)
+- Creating the HTML framework for top menu and footer and linking the top menu to each page section (.5-1hr)
+- Creating flex layout for project thumbnails/ display block in mobile (1-2hr)
+- Thumbnails styling: centering, brightness down, subtle grow on:hover (1hr)
+- Import and implement fonts (.5-1hr)
+- Color research (1hr)
 
 Features (total 4-5hrs):
 - Menu bar with flex for browser, styling (1-2hrs)
