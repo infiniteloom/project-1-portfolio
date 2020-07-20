@@ -56,7 +56,7 @@ const showMenu =(event) =>{
                 $burger.css('display', 'block');    
                 $('.inline-menu').css('display', 'block');
                 // this is part of the slide-in animation- sending the mobile menu from way off screen to the left to hide it and bringing margin-left back to 0 to show it. 
-                $('.mobile-menu-back').css('margin-left','-900000px');
+                $('.mobile-menu-back').css('margin-left','-1000px');
                 $('.title-name').css('display','block');
                 $links.each(function(index){
                     $(this).css('display', 'none');
@@ -77,8 +77,8 @@ const showMenu =(event) =>{
     }
 }
 
+// for mobile links
 $burger.on('click', showMenu);
-$links.on('click', showMenu);
 $close.on('click', showMenu);
 $mobileLinks.on('click', showMenu);
 
