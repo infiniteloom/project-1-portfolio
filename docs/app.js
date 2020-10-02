@@ -8,27 +8,64 @@ fetch(url)
         const projects = data.feed.entry.map(entry => {
             return{
                 title: entry.gsx$title.$t,
-                image: entry.gsx$image.$t,
+                image1: entry.gsx$image1.$t,
+                image2: entry.gsx$image2.$t,
+                image3: entry.gsx$image3.$t,
                 description: entry.gsx$description.$t,
+                stack: entry.gsx$stack.$t,
                 url: entry.gsx$url.$t
             };
         });
+        // Send fetched projects to app function
         app(projects)
     });
 
 
 const app = (data) => {
     const createProjectElement = (project) => {
-        const $div = $('<div>');
-        $div.css('background-image', `url(${project.image})`);
-        let $div2 = $('<div>');
-        $div.append($('<a>').attr('href', project.url).text(`${project.title} - ${project.description}`));
+        const $div = $('<div>').addClass('project-div').attr('id', project.title.replace(/ /g,''));
+
+        // Create top div with title, description
+        const $divInfo = $('<div>').addClass('project-info-cont')
+        const $title = $('<p>').addClass('project-title').text(`${project.title}`)
+        $divInfo.append($title)
+        const $description = ($('<p>').addClass('project-info').text(`${project.description}`));
+        const $stack = ($('<p>').addClass('project-stack').text(`${project.stack}`))
+        $divInfo.append($description, $stack)
+
+        // Append info/top div to project div container
+        $div.append($divInfo)
+
+        // Create bottom div with three image cards
+        const $divImgs = $('<div>').addClass('project-imgs-cont')
+        $divImgs.append($('<img />', {src: project.image1}).addClass('project-image'))
+        $divImgs.append($('<img />', {src: project.image2}).addClass('project-image'))
+        $divImgs.append($('<img />', {src: project.image3}).addClass('project-image'))
+
+        $div.append($divImgs)
+
+
+
+
+        // Populate the projects nav
+        const $projNav = $('.projects-nav')
+        $projNav.append($('<a>').text(project.title).addClass('proj-nav-item').attr('href', `#${project.title.replace(/ /g,'')}`))
+
+
         return $div
+ 
+
+
+
+
+
     }
-        data.forEach(project => {
-            const $projectDiv = createProjectElement(project)
-            $('#projects-code').append($projectDiv);
-        })
+    // Loop through each project in the spreadsheet and use the create project 
+    // element function to create new HTML elements for project info and images
+    data.forEach(project => {
+        const $projectDiv = createProjectElement(project);
+        $('#projects-scope').append($projectDiv);
+    })
 }
 
 
