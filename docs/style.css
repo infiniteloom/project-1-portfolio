@@ -32,8 +32,7 @@ a{
 }
 a:hover{
     color: grey;
-    transition:
-    all 300ms;
+    transition: all 300ms;
     text-decoration: none;
 }
 
@@ -377,11 +376,11 @@ header {
 }
 #about-img-mobile{
     opacity: 0.6;
-    transition: all 2s .3s ease-out;
+    transition: all 1s .3s ease-out;
 }
 #about-text.is-visible p, #about-text.is-visible h2{
     opacity:1;
-    transition: all 2s .3s ease-out;
+    transition: all 1s .3s ease-out;
 }
 #about-title.is-visible{
     transform: translate(0,0);
@@ -437,8 +436,8 @@ header {
     align-items: center;
     justify-content: center;
     background-color: rgb(218, 207, 207);
-    opacity: 0;
-    transition: opacity 3s .25s ease-out;
+    opacity: 0.2;
+    transition: opacity .5s .25s ease-out;
     will-change: opacity;
 }
 .projects-header  h2{
@@ -598,7 +597,7 @@ opacity: 1;
     background-image: url(assets/leawovenhemp.JPG);
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -626,7 +625,7 @@ opacity: 1;
 
 /* ARTIST WEBSITE */
 #artist-website{
-    height: 60vh;
+    height: 40vh;
     width: 100%;
     background-color: #152442;
     display: flex;
@@ -650,9 +649,14 @@ opacity: 1;
     color: #cbcaca;
     font-size: 1.2em;
 }
+#artist-website-text{
+    letter-spacing: .2em;
+    color: rgb(253, 253, 253);
+}
 #artist-website a:hover{
     color: rgb(180, 155, 13);
     text-decoration: none;
+
 }
 #artist-website a span:hover{
     color: rgb(233, 201, 20);
@@ -669,27 +673,38 @@ opacity: 1;
 
 /* CONTACT SECTION */
 #contact{
-    line-height: 2em;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(251, 246, 246);
+    /* background-color: rgb(255, 255, 255); */
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('https://res.cloudinary.com/infiniteloom/image/upload/v1602527553/Unit%2001-%20Project/Contact-form-graphic-lis-timpone-tinted_ssghbu.png');
+
 }
-#contact-prompt{
+.form-prlx-con{
+    padding-top: 20em;
+    width: 100%;
+    line-height: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    background-color: rgba(251, 246, 246, .8);
+    /* background-color: transparent; */
+
+}
+.contact-header{
+    /* width: 100%; */
+    /* height: 80vh; */
+    background-color: transparent;
+    margin: 0 auto;
+    padding-top: 20em;
+    /* margin-bottom: 50px; */
+    /* padding-bottom: 150px; */
 }
 #contact-prompt p{
     font-size: 2em;
-    margin: 0;
-    color: rgb(54, 32, 32);
-
+    text-align: center;
+    color: rgb(0, 0, 0);
 }
 #contact-prompt span{
     margin: 0;
@@ -722,6 +737,8 @@ opacity: 1;
 }
 .form-input{
     position: relative;
+    font-family: sans-serif;
+    color: #000000;
     top: -40px;
     border: none;
     padding: 10px;
@@ -784,7 +801,6 @@ opacity: 1;
 /* FOOTER */
 footer{
     height: 50px;
-    /* max-width: 960px; */
     width: 100%;
 	background-color: rgba(65, 96, 125, 0.8);
     position: fixed;
