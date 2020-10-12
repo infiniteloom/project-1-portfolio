@@ -593,7 +593,7 @@ opacity: 1;
 
 
 /* METAPHOR */
-#metaphor{
+/* #metaphor{
     background-image: url(assets/leawovenhemp.JPG);
     background-size: cover;
     width: 100%;
@@ -612,7 +612,7 @@ opacity: 1;
 }
 #metaphor.is-visible{
     opacity: 1;
-}
+} */
 
 
 
@@ -677,19 +677,23 @@ opacity: 1;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('https://res.cloudinary.com/infiniteloom/image/upload/v1602527553/Unit%2001-%20Project/Contact-form-graphic-lis-timpone-tinted_ssghbu.png');
+    /* background-image: url('https://res.cloudinary.com/infiniteloom/image/upload/v1602527553/Unit%2001-%20Project/Contact-form-graphic-lis-timpone-tinted_ssghbu.png'); */
+
+}
+.timpone-ill{
+    width: 100%;
 
 }
 .form-prlx-con{
-    padding-top: 20em;
+    /* padding-top: 20em; */
     width: 100%;
     line-height: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(251, 246, 246, .8);
-    /* background-color: transparent; */
+    /* background-color: rgba(251, 246, 246, 1); */
+    background-color: transparent;
 
 }
 .contact-header{
@@ -697,7 +701,7 @@ opacity: 1;
     /* height: 80vh; */
     background-color: transparent;
     margin: 0 auto;
-    padding-top: 20em;
+    padding-top: 3em;
     /* margin-bottom: 50px; */
     /* padding-bottom: 150px; */
 }
@@ -730,7 +734,7 @@ opacity: 1;
     position:relative;
     top:-25px;
     left:5px;
-    background-color: rgb(251, 246, 246);
+    background-color: #ffffff;
     color: #865f5f;
     font-weight: lighter;
     font-family: sans-serif;
@@ -743,7 +747,7 @@ opacity: 1;
     border: none;
     padding: 10px;
     width: 100%;
-    background-color: rgb(251, 246, 246);
+    background-color: #ffffff;
     height: 2em;
 }
 .form-input:focus, .form-input-message:focus{
@@ -761,7 +765,7 @@ opacity: 1;
     top: -40px;
     border: none;
     padding: 10px;
-    background-color: rgb(251, 246, 246);
+    background-color: #ffffff;
     width: 100%;
     height: 100%;
 }
