@@ -32,8 +32,13 @@ const app = (data) => {
         // Create div with links
         const $divLinks = $('<div>').addClass('project-links-cont')
         const $livelink = ($('<a>').addClass('project-url').text('Live site').attr('href', `${project.url}`));
-        const $git = ($('<a>').addClass('project-git').text('GitHub').attr('href', `${project.git}`));
-        $divLinks.append($livelink, $git)
+
+        if(project.git != 'na'){
+            const $git = ($('<a>').addClass('project-git').text('GitHub').attr('href', `${project.git}`));
+            $divLinks.append($livelink, $git)
+        }else{
+            $divLinks.append($livelink)
+        }
 
         // Create div with title, description
         const $divDet = $('<div>').addClass('project-details-cont')
